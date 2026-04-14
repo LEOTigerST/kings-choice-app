@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary": "#005d63",
+                        "tertiary-fixed-dim": "#efc900",
+                        "surface-variant": "#25252c",
+                        "surface-dim": "#0e0e13",
+                        "on-tertiary-fixed": "#453900",
+                        "tertiary": "#ffe792",
+                        "secondary-fixed": "#f1c1ff",
+                        "surface-container-low": "#131318",
+                        "surface": "#0e0e13",
+                        "on-background": "#f8f5fd",
+                        "primary-fixed-dim": "#00deec",
+                        "surface-container": "#19191f",
+                        "inverse-surface": "#fbf8ff",
+                        "outline-variant": "#48474d",
+                        "error-container": "#a70138",
+                        "surface-bright": "#2c2b33",
+                        "inverse-primary": "#006a71",
+                        "secondary-fixed-dim": "#eaaeff",
+                        "secondary-container": "#9900cf",
+                        "secondary": "#d674ff",
+                        "outline": "#76747b",
+                        "secondary-dim": "#bb00fc",
+                        "tertiary-dim": "#efc900",
+                        "on-secondary-container": "#fff5fc",
+                        "inverse-on-surface": "#55545a",
+                        "on-tertiary-fixed-variant": "#665500",
+                        "on-error": "#490013",
+                        "on-surface-variant": "#acaab1",
+                        "primary": "#8ff5ff",
+                        "primary-fixed": "#00eefc",
+                        "tertiary-fixed": "#ffd709",
+                        "tertiary-container": "#ffd709",
+                        "on-secondary": "#390050",
+                        "on-secondary-fixed-variant": "#8400b3",
+                        "on-primary-fixed": "#003f43",
+                        "on-error-container": "#ffb2b9",
+                        "background": "#0e0e13",
+                        "on-tertiary-container": "#5b4b00",
+                        "primary-container": "#00eefc",
+                        "surface-container-lowest": "#000000",
+                        "primary-dim": "#00deec",
+                        "surface-tint": "#8ff5ff",
+                        "on-primary-container": "#005359",
+                        "on-primary-fixed-variant": "#005e64",
+                        "error": "#ff6e84",
+                        "on-surface": "#f8f5fd",
+                        "surface-container-high": "#1f1f26",
+                        "surface-container-highest": "#25252c",
+                        "on-tertiary": "#655400",
+                        "on-secondary-fixed": "#580079",
+                        "error-dim": "#d73357"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Manrope"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(31, 31, 38, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .text-gradient-primary {
+            background: linear-gradient(135deg, #8ff5ff 0%, #00eefc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0e0e13; }
+        ::-webkit-scrollbar-thumb { background: #25252c; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #48474d; }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary/30">
+<!-- TopNavBar Shell -->
+<nav class="fixed top-0 w-full z-50 bg-[#0e0e13]/70 backdrop-blur-xl flex justify-between items-center px-8 py-4 w-full shadow-[0_4px_30px_rgba(143,245,255,0.08)]">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-[#8ff5ff] to-[#00eefc] font-headline">Kinetic</span>
+<div class="hidden md:flex gap-6 items-center">
+<span class="font-['Space_Grotesk'] tracking-tight text-sm uppercase text-[#acaab1] hover:text-[#8ff5ff] transition-colors cursor-pointer">Fate Points: 2,500</span>
+<span class="font-['Space_Grotesk'] tracking-tight text-sm uppercase text-[#acaab1] hover:text-[#8ff5ff] transition-colors cursor-pointer">VIP Level: 4</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-[#25252c] hover:shadow-[0_0_15px_rgba(143,245,255,0.2)] active:scale-95 duration-200 ease-out rounded-lg transition-all">
+<span class="material-symbols-outlined text-[#8ff5ff]">notifications</span>
+</button>
+<button class="p-2 hover:bg-[#25252c] hover:shadow-[0_0_15px_rgba(143,245,255,0.2)] active:scale-95 duration-200 ease-out rounded-lg transition-all">
+<span class="material-symbols-outlined text-[#8ff5ff]">account_balance_wallet</span>
+</button>
+<div class="w-10 h-10 rounded-full border border-[#48474d]/20 overflow-hidden">
+<img alt="User Profile Avatar" class="w-full h-full object-cover" data-alt="Cyberpunk style character portrait with neon lighting and high-tech visor on dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOzxiIfsW5Sx6rnxyqdY0CGq6tcqoa85d_tIoPYr0p0EShbkzmo8MZG6sJI0OrrZ5ZUGKM0cbq8p9q50AKHBOdzUGhfKIeuc23G71S0oapLrkrVGEV1h-Q0UCwdSurc7zqvTv99HoiNawNoE4ZaHFuSv_OVxOSkIP_My0CjWf6g-C6SC8p_SNK3mRXHutIg2G5iDXs7i_X2SdqNmxGC9ShyQ4iBs6OiFEvsL8YjryEjHPrbY8Er7VpRQW4mt2YwDwDuAcT1b8xGvY"/>
+</div>
+</div>
+</nav>
+<!-- SideNavBar Shell -->
+<aside class="h-screen w-64 fixed left-0 top-0 z-40 bg-[#131318] border-r border-[#48474d]/20 flex flex-col h-full py-8 shadow-2xl shadow-black pt-24">
+<div class="px-6 mb-10">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary text-xl">bolt</span>
+</div>
+<div>
+<h2 class="text-xl font-black text-[#8ff5ff] italic font-headline leading-none">KINETIC</h2>
+<p class="text-[10px] text-on-surface-variant font-label uppercase tracking-widest mt-1">Aetheris Prime</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-4 text-[#acaab1] px-6 py-4 hover:translate-x-1 transition-transform font-['Space_Grotesk'] text-base tracking-wide hover:bg-[#1f1f26] hover:text-[#8ff5ff]" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Console</span>
+</a>
+<a class="flex items-center gap-4 bg-gradient-to-r from-[#8ff5ff]/10 to-transparent text-[#8ff5ff] border-l-4 border-[#8ff5ff] px-6 py-4 font-['Space_Grotesk'] text-base tracking-wide transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span>Store</span>
+</a>
+<a class="flex items-center gap-4 text-[#acaab1] px-6 py-4 hover:translate-x-1 transition-transform font-['Space_Grotesk'] text-base tracking-wide hover:bg-[#1f1f26] hover:text-[#8ff5ff]" href="#">
+<span class="material-symbols-outlined">sports_esports</span>
+<span>Game Entry</span>
+</a>
+<a class="flex items-center gap-4 text-[#acaab1] px-6 py-4 hover:translate-x-1 transition-transform font-['Space_Grotesk'] text-base tracking-wide hover:bg-[#1f1f26] hover:text-[#8ff5ff]" href="#">
+<span class="material-symbols-outlined">military_tech</span>
+<span>Prize Inquiry</span>
+</a>
+<a class="flex items-center gap-4 text-[#acaab1] px-6 py-4 hover:translate-x-1 transition-transform font-['Space_Grotesk'] text-base tracking-wide hover:bg-[#1f1f26] hover:text-[#8ff5ff]" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span>User Settings</span>
+</a>
+</nav>
+<div class="px-6 mt-auto">
+<button class="w-full bg-primary text-on-primary font-headline font-bold py-4 rounded-xl hover:shadow-[0_0_20px_rgba(143,245,255,0.4)] transition-all active:scale-95 uppercase tracking-tighter">
+                LAUNCH GAME
+            </button>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 pt-24 pb-12 px-12 min-h-screen">
+<!-- Hero Header -->
+<header class="mb-12">
+<div class="flex flex-col gap-2">
+<span class="text-primary font-headline text-sm uppercase tracking-[0.3em]">Imperial Exchange</span>
+<h1 class="text-5xl font-black font-headline tracking-tighter text-on-background">KINETIC STORE</h1>
+</div>
+</header>
+<!-- USD Purchases Section -->
+<section class="mb-16">
+<div class="flex items-end justify-between mb-8 border-b border-outline-variant/10 pb-4">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-3xl">payments</span>
+<h3 class="text-2xl font-headline font-bold tracking-tight">USD Purchases</h3>
+</div>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-surface-container-high text-on-surface-variant text-xs font-label rounded-full">Secure Checkout</span>
+<span class="px-3 py-1 bg-surface-container-high text-on-surface-variant text-xs font-label rounded-full">Instant Delivery</span>
+</div>
+</div>
+<!-- Bento Grid of Product Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Product Card 1 -->
+<div class="group relative surface-container-high rounded-xl overflow-hidden hover:bg-surface-bright transition-all duration-300 hover:shadow-[0_10px_40px_rgba(0,0,0,0.5)] border border-transparent hover:border-primary/20">
+<div class="aspect-[4/5] relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Glowing blue energy crystals on a high-tech pedestal with neon particles and dark cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-wuk5HIEebj8WUqTogZ4N4VTuXXSPOWJiL8GYIBo6BfI_07pBAodJnlwcdaLTXiqmL5_DoCkI02BaGBPNloAAdx0g1RNbuFqHP9zIsLtpr54JmuWiySFOdU1OMjZQhseEtxRb7lrvMp6VXOeyGCl8Kzwn6ZAXGdkosm7I7El51_rG7vIVcoEItNfivpOjS-EUpQzrrKzqSamTlFE_QBBT7xMQDY9TjRsc1IQvgQYrHy9sFagygZznHlO5PGI2e0WIlQF691tv5EY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-high via-transparent to-transparent"></div>
+<div class="absolute top-4 left-4">
+<span class="bg-primary/20 backdrop-blur-md text-primary px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase">Popular</span>
+</div>
+</div>
+<div class="p-6 relative -mt-12 bg-gradient-to-t from-surface-container-high via-surface-container-high to-transparent">
+<h4 class="text-xl font-headline font-bold mb-1 group-hover:text-primary transition-colors">Starter Core Pack</h4>
+<p class="text-on-surface-variant text-sm font-body mb-6 line-clamp-2">The essential kit for newly awakened Kinetic pilots. Includes 500 Aether Shards.</p>
+<div class="flex items-center justify-between">
+<span class="text-2xl font-black font-headline tracking-tighter">$19.99</span>
+<button class="bg-primary text-on-primary p-3 rounded-lg hover:bg-primary-fixed transition-colors flex items-center gap-2 group/btn">
+<span class="material-symbols-outlined text-xl">shopping_cart</span>
+<span class="text-sm font-bold font-headline hidden group-hover/btn:block">BUY NOW</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group relative surface-container-high rounded-xl overflow-hidden hover:bg-surface-bright transition-all duration-300 hover:shadow-[0_10px_40px_rgba(0,0,0,0.5)] border border-transparent hover:border-primary/20">
+<div class="aspect-[4/5] relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Futuristic glowing purple armor components with intricate circuitry patterns and metallic surfaces" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWkJlw37-dKlVfPM1tQ1qzYxbX-udW7jce9IRW6ZF72PGzyMF86JMigwE4sX3QrhNKczhDpA89AY77xWCTVyawmODOo90HcInU1jwgvISNIDEeIHIp-EDYC5ktp6DLvH2Rg9ZJCKldAas2M1E_SxsS59VPWh3GgEHuAgmNhpwWdGD-5DkJ-fMujQjnWwzsMh_uXOMfuZzFnioB5W_Blp6hhzckeEPrQcQRSx60jTjznA826hJVwO-QtnlYIptnVGWep0cQBvVqxiQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-high via-transparent to-transparent"></div>
+</div>
+<div class="p-6 relative -mt-12 bg-gradient-to-t from-surface-container-high via-surface-container-high to-transparent">
+<h4 class="text-xl font-headline font-bold mb-1 group-hover:text-primary transition-colors">Zenith Plate Gear</h4>
+<p class="text-on-surface-variant text-sm font-body mb-6 line-clamp-2">Complete set of Mark IV cosmetic plating. Limited availability for current season.</p>
+<div class="flex items-center justify-between">
+<span class="text-2xl font-black font-headline tracking-tighter">$45.00</span>
+<button class="bg-primary text-on-primary p-3 rounded-lg hover:bg-primary-fixed transition-colors flex items-center gap-2 group/btn">
+<span class="material-symbols-outlined text-xl">shopping_cart</span>
+<span class="text-sm font-bold font-headline hidden group-hover/btn:block">BUY NOW</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group relative surface-container-high rounded-xl overflow-hidden hover:bg-surface-bright transition-all duration-300 hover:shadow-[0_10px_40px_rgba(0,0,0,0.5)] border border-transparent hover:border-primary/20">
+<div class="aspect-[4/5] relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Abstract vibrant digital flow of data in teal and cyan representing high-speed network connection and energy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAN9h3iDogqrWZyHNZgPgVU6jjnaEa9-0_WFBBfbL526_hSkVQT5eRQlsn5JqoYwYCeVu8ywpZ-i8gdPZ-RbRKZXk325n9EShMnXQGRTlOOZCj5qvfQUPafK-HN1miNq87PXUGdIpX6AJSDmTMkiKpiSY4auKCaa96aiaeXsRPBh0-KGKGh5GHmj4cW201_BBRCbxX32r_wkaJu1v-GKaSW03fOJaj0pq8tl5QgUtMn1clrQLe52Wwt7hl-diJHjsgwKwRlfmarIy4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-high via-transparent to-transparent"></div>
+<div class="absolute top-4 left-4">
+<span class="bg-tertiary/20 backdrop-blur-md text-tertiary px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase">Best Value</span>
+</div>
+</div>
+<div class="p-6 relative -mt-12 bg-gradient-to-t from-surface-container-high via-surface-container-high to-transparent">
+<h4 class="text-xl font-headline font-bold mb-1 group-hover:text-primary transition-colors">Neural Boost 30D</h4>
+<p class="text-on-surface-variant text-sm font-body mb-6 line-clamp-2">30 days of +50% XP and Fate Point generation. Stackable with VIP bonuses.</p>
+<div class="flex items-center justify-between">
+<span class="text-2xl font-black font-headline tracking-tighter">$12.50</span>
+<button class="bg-primary text-on-primary p-3 rounded-lg hover:bg-primary-fixed transition-colors flex items-center gap-2 group/btn">
+<span class="material-symbols-outlined text-xl">shopping_cart</span>
+<span class="text-sm font-bold font-headline hidden group-hover/btn:block">BUY NOW</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group relative surface-container-high rounded-xl overflow-hidden hover:bg-surface-bright transition-all duration-300 hover:shadow-[0_10px_40px_rgba(0,0,0,0.5)] border border-transparent hover:border-primary/20">
+<div class="aspect-[4/5] relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Highly detailed futuristic drone with glowing thrusters hovering in a dark laboratory setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEn-n3vES-eSEJ8031QvcShkenEPvGc-mjehDPWEqLsr3Ssgk7d1oZHdYTo0bBTxdEOspASXPuJn4WG560iSIOf5RcfFJj3KZejVLpxQh-p0QiCaB49J5RJPcZKuoPNdnUzSAdm2FJLZxjPCyMpD4k_mliXu6_9hwBVT5RliLcgLoEDhd0e07sDkjBn3VIYKwtXWm7_m4paOsomuAuw5dpTeUkb-zbIxm4Swe9l3UVRrDZqq4AncbwW-nuQbW66ovEZNCaUA2183s"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-high via-transparent to-transparent"></div>
+</div>
+<div class="p-6 relative -mt-12 bg-gradient-to-t from-surface-container-high via-surface-container-high to-transparent">
+<h4 class="text-xl font-headline font-bold mb-1 group-hover:text-primary transition-colors">Aeon Sentry Bot</h4>
+<p class="text-on-surface-variant text-sm font-body mb-6 line-clamp-2">A unique companion bot that assists in resource gathering. Purely cosmetic.</p>
+<div class="flex items-center justify-between">
+<span class="text-2xl font-black font-headline tracking-tighter">$29.99</span>
+<button class="bg-primary text-on-primary p-3 rounded-lg hover:bg-primary-fixed transition-colors flex items-center gap-2 group/btn">
+<span class="material-symbols-outlined text-xl">shopping_cart</span>
+<span class="text-sm font-bold font-headline hidden group-hover/btn:block">BUY NOW</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Cryptocurrency Section -->
+<section>
+<div class="flex items-end justify-between mb-8 border-b border-outline-variant/10 pb-4">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-tertiary text-3xl">currency_bitcoin</span>
+<h3 class="text-2xl font-headline font-bold tracking-tight">Cryptocurrency Transfer</h3>
+</div>
+<div class="flex gap-4">
+<div class="flex items-center gap-2 text-xs font-label text-[#acaab1]">
+<span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                        Network Active
+                    </div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Transfer Instructions -->
+<div class="lg:col-span-1 space-y-6">
+<div class="glass-card p-8 rounded-xl border border-outline-variant/10">
+<p class="text-on-surface-variant leading-relaxed font-body">
+                            Load your Kinetic wallet instantly using Ethereum (ETH) or Bitcoin (BTC). Funds will be automatically converted to <span class="text-primary font-bold">Fate Points</span> at the current market rate upon 3 network confirmations.
+                        </p>
+<ul class="mt-6 space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+<span class="text-sm text-on-surface">No processing fees on transfers above $50</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+<span class="text-sm text-on-surface">24/7 automated verification</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+<span class="text-sm text-on-surface">Secure cold-storage integration</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Wallet Interaction -->
+<div class="lg:col-span-2">
+<div class="surface-container-high p-8 rounded-xl relative overflow-hidden">
+<!-- Decorative background element -->
+<div class="absolute -right-20 -top-20 w-64 h-64 bg-primary/5 rounded-full blur-[100px]"></div>
+<div class="relative z-10">
+<div class="flex flex-col md:flex-row gap-8 items-center">
+<!-- QR Code Simulation -->
+<div class="w-48 h-48 bg-white p-2 rounded-xl shrink-0 group cursor-pointer relative">
+<div class="w-full h-full bg-surface-container-lowest flex items-center justify-center relative overflow-hidden rounded-lg">
+<div class="grid grid-cols-8 gap-1 opacity-80">
+<div class="w-4 h-4 bg-white"></div><div class="w-4 h-4 bg-white"></div><div class="w-4 h-4 bg-transparent"></div><div class="w-4 h-4 bg-white"></div><div class="w-4 h-4 bg-white"></div><div class="w-4 h-4 bg-white"></div><div class="w-4 h-4 bg-transparent"></div><div class="w-4 h-4 bg-white"></div>
+<div class="w-4 h-4 bg-white"></div><div class="w-4 h-4 bg-transparent"></div><div class="w-4 h-4 bg-white"></div><div class="w-4 h-4 bg-transparent"></div><div class="w-4 h-4 bg-white"></div><div class="w-4 h-4 bg-transparent"></div><div class="w-4 h-4 bg-white"></div><div class="w-4 h-4 bg-white"></div>
+<div class="w-4 h-4 bg-transparent"></div><div class="w-4 h-4 bg-white"></div><div class="w-4 h-4 bg-white"></div><div class="w-4 h-4 bg-white"></div><div class="w-4 h-4 bg-transparent"></div><div class="w-4 h-4 bg-white"></div><div class="w-4 h-4 bg-white"></div><div class="w-4 h-4 bg-transparent"></div>
+<div class="w-4 h-4 bg-white"></div><div class="w-4 h-4 bg-transparent"></div><div class="w-4 h-4 bg-white"></div><div class="w-4 h-4 bg-white"></div><div class="w-4 h-4 bg-white"></div><div class="w-4 h-4 bg-transparent"></div><div class="w-4 h-4 bg-white"></div><div class="w-4 h-4 bg-white"></div>
+<div class="w-4 h-4 bg-white"></div><div class="w-4 h-4 bg-white"></div><div class="w-4 h-4 bg-white"></div><div class="w-4 h-4 bg-transparent"></div><div class="w-4 h-4 bg-white"></div><div class="w-4 h-4 bg-white"></div><div class="w-4 h-4 bg-transparent"></div><div class="w-4 h-4 bg-white"></div>
+<div class="w-4 h-4 bg-transparent"></div><div class="w-4 h-4 bg-white"></div><div class="w-4 h-4 bg-transparent"></div><div class="w-4 h-4 bg-white"></div><div class="w-4 h-4 bg-white"></div><div class="w-4 h-4 bg-transparent"></div><div class="w-4 h-4 bg-white"></div><div class="w-4 h-4 bg-white"></div>
+<div class="w-4 h-4 bg-white"></div><div class="w-4 h-4 bg-white"></div><div class="w-4 h-4 bg-white"></div><div class="w-4 h-4 bg-white"></div><div class="w-4 h-4 bg-transparent"></div><div class="w-4 h-4 bg-white"></div><div class="w-4 h-4 bg-white"></div><div class="w-4 h-4 bg-transparent"></div>
+<div class="w-4 h-4 bg-white"></div><div class="w-4 h-4 bg-transparent"></div><div class="w-4 h-4 bg-white"></div><div class="w-4 h-4 bg-transparent"></div><div class="w-4 h-4 bg-white"></div><div class="w-4 h-4 bg-transparent"></div><div class="w-4 h-4 bg-white"></div><div class="w-4 h-4 bg-white"></div>
+</div>
+<div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-background/60 backdrop-blur-sm rounded-xl">
+<span class="text-xs font-bold font-headline text-primary">SCAN QR</span>
+</div>
+</div>
+<!-- Address Input and Actions -->
+<div class="flex-1 w-full space-y-6">
+<div class="space-y-2">
+<label class="text-xs font-label uppercase tracking-widest text-on-surface-variant">Your ETH/BTC Deposit Address</label>
+<div class="flex flex-col md:flex-row gap-2">
+<div class="flex-1 bg-surface-container-lowest px-4 py-4 rounded-lg font-mono text-primary text-sm break-all border border-outline-variant/20 flex items-center">
+                                                0x71C7656EC7ab88b098defB751B7401B5f6d8976F
+                                            </div>
+<button class="bg-primary text-on-primary px-6 py-4 rounded-lg font-headline font-bold flex items-center justify-center gap-2 hover:bg-primary-fixed transition-all group active:scale-95">
+<span class="material-symbols-outlined group-active:hidden">content_copy</span>
+<span class="material-symbols-outlined hidden group-active:block animate-bounce">check</span>
+<span class="group-active:hidden">Copy Address</span>
+<span class="hidden group-active:block">Copied!</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container p-4 rounded-lg flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-[#627eea]/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-[#627eea]">stat_0</span>
+</div>
+<div>
+<div class="text-[10px] text-on-surface-variant uppercase font-label">ETH Rate</div>
+<div class="text-sm font-headline font-bold">1 ETH = 2,450 FP</div>
+</div>
+</div>
+<div class="bg-surface-container p-4 rounded-lg flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-[#f7931a]/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-[#f7931a]">currency_bitcoin</span>
+</div>
+<div>
+<div class="text-[10px] text-on-surface-variant uppercase font-label">BTC Rate</div>
+<div class="text-sm font-headline font-bold">1 BTC = 64,200 FP</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Global Visual Anchor - Ambient Glow -->
+<div class="fixed bottom-0 right-0 w-[500px] h-[500px] bg-primary/5 blur-[150px] -z-10 pointer-events-none"></div>
+<div class="fixed top-0 left-0 w-[300px] h-[300px] bg-secondary/5 blur-[120px] -z-10 pointer-events-none"></div>
+</body></html>

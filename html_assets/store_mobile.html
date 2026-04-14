@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;family=Manrope:wght@200..800&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "inverse-on-surface": "#55545a",
+            "inverse-primary": "#006a71",
+            "on-error": "#490013",
+            "surface-variant": "#25252c",
+            "surface-container-highest": "#25252c",
+            "primary-fixed": "#00eefc",
+            "inverse-surface": "#fbf8ff",
+            "surface-container-low": "#131318",
+            "on-error-container": "#ffb2b9",
+            "error": "#ff6e84",
+            "surface-container-high": "#1f1f26",
+            "tertiary-container": "#ffd709",
+            "secondary-dim": "#bb00fc",
+            "on-secondary-fixed-variant": "#8400b3",
+            "tertiary-fixed-dim": "#efc900",
+            "secondary-fixed-dim": "#eaaeff",
+            "on-tertiary": "#655400",
+            "primary": "#8ff5ff",
+            "primary-dim": "#00deec",
+            "secondary": "#d674ff",
+            "on-surface": "#f8f5fd",
+            "surface-dim": "#0e0e13",
+            "error-container": "#a70138",
+            "error-dim": "#d73357",
+            "surface": "#0e0e13",
+            "on-secondary-fixed": "#580079",
+            "on-tertiary-fixed": "#453900",
+            "tertiary": "#ffe792",
+            "on-primary-fixed": "#003f43",
+            "on-primary-container": "#005359",
+            "on-primary": "#005d63",
+            "on-tertiary-container": "#5b4b00",
+            "surface-tint": "#8ff5ff",
+            "secondary-container": "#9900cf",
+            "on-surface-variant": "#acaab1",
+            "on-background": "#f8f5fd",
+            "on-secondary": "#390050",
+            "background": "#0e0e13",
+            "on-secondary-container": "#fff5fc",
+            "outline": "#76747b",
+            "outline-variant": "#48474d",
+            "surface-container-lowest": "#000000",
+            "primary-container": "#00eefc",
+            "surface-bright": "#2c2b33",
+            "primary-fixed-dim": "#00deec",
+            "surface-container": "#19191f",
+            "on-primary-fixed-variant": "#005e64",
+            "on-tertiary-fixed-variant": "#665500",
+            "secondary-fixed": "#f1c1ff",
+            "tertiary-dim": "#efc900",
+            "tertiary-fixed": "#ffd709"
+          },
+          fontFamily: {
+            "headline": ["Space Grotesk"],
+            "body": ["Manrope"],
+            "label": ["Inter"]
+          },
+          borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .glass-card {
+      background: rgba(31, 31, 38, 0.7);
+      backdrop-filter: blur(12px);
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary/30 min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#0e0e13]/80 backdrop-blur-xl flex justify-between items-center px-6 py-4 w-full shadow-[0_0_40px_rgba(143,245,255,0.08)]">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden border border-primary/20 shadow-[0_0_15px_rgba(143,245,255,0.1)]">
+<img alt="Pilot_01" data-alt="Cyberpunk style character portrait with glowing blue details and dark mechanical visor in a futuristic digital environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRG_S076-9hhRW8VhUMP32L8W3EYW83jLIm1-JqmA0R0jzD0Fi6yPXIUtaBhKF60Ocppco_Jl7aBfZ-8L37QEYOKR66elpNu9GV56C9cNDEyEYaVsTistbtLvCKEGX80DBQ-1riUXBfqTaUQ3l703DMrp7THdiF0t74IrC2vGgB1EuGwo0iTnUIrp6vevY-uY6QWtWy5ZzPN94aeKkUZMWF0po0HvM3HIlQUEgxk7oBodoRPk2rM7svS-sXba8cbQKx3CZx5kcJYc"/>
+</div>
+<span class="font-['Space_Grotesk'] tracking-tight uppercase text-2xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-[#8ff5ff] to-[#00eefc]">KINETIC</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-high px-3 py-1.5 rounded-full border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span class="font-['Space_Grotesk'] text-sm font-bold text-[#8ff5ff]">Fate: 1,200 | EN</span>
+</div>
+</header>
+<!-- NavigationDrawer (Desktop Only) -->
+<aside class="fixed left-0 top-0 h-full w-72 hidden md:block bg-[#131318] shadow-[20px_0_60px_rgba(0,0,0,0.5)] z-40">
+<div class="flex flex-col h-full py-8">
+<div class="px-8 mb-12">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center border border-outline-variant/20">
+<span class="material-symbols-outlined text-primary">person</span>
+</div>
+<div>
+<div class="font-headline font-black italic text-[#8ff5ff]">Pilot_01</div>
+<div class="text-xs text-on-surface-variant uppercase tracking-widest">Zenith Rank</div>
+</div>
+</div>
+</div>
+<nav class="flex flex-col gap-1">
+<a class="text-[#acaab1] px-6 py-4 opacity-70 hover:bg-[#1f1f26] hover:text-[#ffffff] transition-all hover:translate-x-1 duration-300 flex items-center gap-4 font-['Manrope'] font-medium" href="#">
+<span class="material-symbols-outlined">dashboard</span> Console
+        </a>
+<a class="bg-gradient-to-r from-[#8ff5ff]/10 to-transparent border-l-4 border-[#8ff5ff] text-[#8ff5ff] font-bold px-6 py-4 flex items-center gap-4 font-['Manrope']" href="#">
+<span class="material-symbols-outlined">shopping_bag</span> Store
+        </a>
+<a class="text-[#acaab1] px-6 py-4 opacity-70 hover:bg-[#1f1f26] hover:text-[#ffffff] transition-all hover:translate-x-1 duration-300 flex items-center gap-4 font-['Manrope'] font-medium" href="#">
+<span class="material-symbols-outlined">sports_esports</span> Game Entry
+        </a>
+<a class="text-[#acaab1] px-6 py-4 opacity-70 hover:bg-[#1f1f26] hover:text-[#ffffff] transition-all hover:translate-x-1 duration-300 flex items-center gap-4 font-['Manrope'] font-medium" href="#">
+<span class="material-symbols-outlined">receipt_long</span> Prize Inquiry
+        </a>
+<a class="text-[#acaab1] px-6 py-4 opacity-70 hover:bg-[#1f1f26] hover:text-[#ffffff] transition-all hover:translate-x-1 duration-300 flex items-center gap-4 font-['Manrope'] font-medium" href="#">
+<span class="material-symbols-outlined">settings</span> User Settings
+        </a>
+</nav>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="pt-24 pb-32 px-6 md:ml-72 max-w-7xl mx-auto">
+<!-- Hero / Title Section -->
+<section class="mb-10">
+<div class="flex flex-col gap-1">
+<h1 class="font-headline text-4xl font-extrabold tracking-tighter text-on-surface">Store</h1>
+<p class="text-on-surface-variant font-label text-sm uppercase tracking-[0.2em]">Acquire Assets &amp; Power-ups</p>
+</div>
+</section>
+<!-- Section 1: USD Purchases -->
+<section class="mb-12">
+<div class="flex items-center justify-between mb-6">
+<h2 class="font-headline text-xl font-bold flex items-center gap-2">
+          Fiat Purchases
+</h2>
+<div class="h-[1px] flex-grow ml-6 bg-gradient-to-r from-outline-variant/30 to-transparent"></div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="bg-surface-container-high rounded-xl overflow-hidden group hover:bg-surface-bright transition-all duration-300 shadow-[0_0_40px_rgba(0,0,0,0.3)] hover:shadow-[0_0_40px_rgba(143,245,255,0.05)] border border-outline-variant/10">
+<div class="relative h-48 w-full overflow-hidden">
+<img alt="Starter Pack" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Futuristic glowing energy canister with blue lightning effects and high-tech mechanical housing on a dark textured background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfW0UuXRaKSsz5SF_SkdoErQyAS3eok2Gf0Ly-2k6XYcZwOy0GXVF28hEefkF778DCIxTAf1dWPojfH21cvt0D8ectLJYXAZ-JAfehzT_DloKwlzNbh4LvK7ao1E-foMvdDr6_etGjgLkADuKcS-4NHKsHfNXx7Ot5lpuOaxqN8opBydWPQcnQxk_geICkh0x418e7oiC1l0hqN53zfKhq0ZRYdjRUoVjLyHSJVIhcYBRvkAJwOPcFJghq-_uZp1D5Z41M5M4AhZw"/>
+<div class="absolute top-3 right-3 bg-primary text-on-primary text-[10px] font-bold px-2 py-1 rounded-sm uppercase tracking-widest shadow-lg">Best Value</div>
+</div>
+<div class="p-6">
+<div class="flex flex-col mb-6">
+<h3 class="font-headline text-xl font-bold leading-tight mb-1">Starter Pack</h3>
+<p class="text-on-surface-variant text-xs">Includes 1,000 Fate + Seasonal Skin</p>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-headline text-2xl font-black text-primary">$9.99</span>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-md font-bold text-sm active:scale-95 transition-transform hover:brightness-110">Purchase</button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-high rounded-xl overflow-hidden group hover:bg-surface-bright transition-all duration-300 shadow-[0_0_40px_rgba(0,0,0,0.3)] border border-outline-variant/10">
+<div class="relative h-48 w-full overflow-hidden">
+<img alt="Booster Bundle" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A collection of holographic tech chips and neon-lit data modules floating in a pressurized dark space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSUZq9eb-1LlAgnljnvilRyYxQl0jB3vyt4r5xpDMCajWbyEQvlPRFW2P5pdnVHtCCEzAYwRGi0eBWRNpWAOn2hrliKgkbjAFg_3240fwX9v8zjmrOvTGc62JLazwENs3J6uBCI2LOZR9vPXdmowDAae-0L1HQnYYtyjZ3rVNkJFnaIDvS-G3DLn5RwmbKOHZ8WNW00fW0cyPlDxyX_T2F5vMfFZriqzb9wo3l-zO9tvTLcAF-ERZzOexprrWyvIKOkHGpMw5cPsE"/>
+</div>
+<div class="p-6">
+<div class="flex flex-col mb-6">
+<h3 class="font-headline text-xl font-bold leading-tight mb-1">Booster Bundle</h3>
+<p class="text-on-surface-variant text-xs">5,000 Fate Credits for accelerated growth</p>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-headline text-2xl font-black text-primary">$49.99</span>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-md font-bold text-sm active:scale-95 transition-transform hover:brightness-110">Purchase</button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-high rounded-xl overflow-hidden group hover:bg-surface-bright transition-all duration-300 shadow-[0_0_40px_rgba(0,0,0,0.3)] border border-outline-variant/10">
+<div class="relative h-48 w-full overflow-hidden">
+<img alt="Zenith Core" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A massive golden glowing core pulsing with celestial energy, surrounded by rotating metallic rings and digital particles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqoF0Fa8TSjmnxyfFgQgWagWkJwgXTngiPwY876Ij_ewt-rD5K-kiMpsMswuHthxMqc3dKdDAl9suyh4MlrmAqhn99AXQuSAbvlDOodcaxXazWFRDKWazxB_pvN2dt6W5H7UfMLUAMMVkOSm2OwqGWex6cfHMgAVWgvnfgvfdOWSNBd8DsXOTLBu2Oc1UZLi00LJ5FdV_SlJITLNGSBKKUKuvDG8sbf0gFsWbBVNZXbRRJrHaPgE4IcjodcXEy9goEj7xhS53K6rY"/>
+<div class="absolute top-3 right-3 bg-tertiary text-on-tertiary text-[10px] font-bold px-2 py-1 rounded-sm uppercase tracking-widest shadow-lg">Zenith Grade</div>
+</div>
+<div class="p-6">
+<div class="flex flex-col mb-6">
+<h3 class="font-headline text-xl font-bold leading-tight mb-1">Zenith Core</h3>
+<p class="text-on-surface-variant text-xs">Unlock unlimited monthly system access</p>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-headline text-2xl font-black text-tertiary">$99.99</span>
+<button class="bg-tertiary text-on-tertiary px-6 py-2.5 rounded-md font-bold text-sm active:scale-95 transition-transform shadow-[0_0_20px_rgba(255,231,146,0.3)] hover:brightness-110">Purchase</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Cryptocurrency Purchases -->
+<section>
+<div class="flex items-center justify-between mb-6">
+<h2 class="font-headline text-xl font-bold flex items-center gap-2">
+          Crypto Payments
+</h2>
+<div class="h-[1px] flex-grow ml-6 bg-gradient-to-r from-outline-variant/30 to-transparent"></div>
+</div>
+<div class="bg-surface-container-low rounded-2xl border border-outline-variant/10 shadow-[0_20px_60px_rgba(0,0,0,0.4)] overflow-hidden">
+<div class="flex flex-col md:flex-row items-stretch">
+<!-- Left Info Side -->
+<div class="flex-1 p-8 md:p-10 border-b md:border-b-0 md:border-r border-outline-variant/10">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center border border-primary/20">
+<span class="material-symbols-outlined text-primary text-2xl">account_balance_wallet</span>
+</div>
+<div>
+<h3 class="font-headline text-2xl font-bold">Web3 Exclusive Bonus</h3>
+<p class="text-primary text-xs font-bold uppercase tracking-widest mt-1">Limited time offer</p>
+</div>
+</div>
+<p class="text-on-surface-variant leading-relaxed text-sm mb-8">
+              Utilize decentralized assets for instant settlement and reduced overhead. We currently accept Bitcoin (BTC), Ethereum (ETH), and Tether (USDT).
+              <span class="block mt-4 p-4 rounded-lg bg-surface-container-highest/50 border border-primary/10 text-on-surface">
+<strong class="text-primary">+15% Bonus Credits</strong> automatically applied to all cryptocurrency deposits.
+              </span>
+</p>
+<div class="space-y-4">
+<label class="font-label text-xs text-on-surface-variant uppercase tracking-widest block font-semibold">Destination Wallet Address</label>
+<div class="flex items-center gap-2">
+<div class="flex-grow bg-black/40 border border-outline-variant/30 rounded-lg p-3 font-mono text-sm text-primary-dim/90 overflow-x-auto no-scrollbar whitespace-nowrap">
+                  0x71C7656EC7ab88b098defB751B7401B5f6d8976F
+                </div>
+<button class="bg-surface-container-highest p-3 rounded-lg hover:text-primary hover:border-primary/40 border border-transparent transition-all active:scale-90 duration-200">
+<span class="material-symbols-outlined text-xl">content_copy</span>
+</button>
+</div>
+<div class="flex items-center gap-2 text-xs text-on-surface-variant/70">
+<span class="material-symbols-outlined text-sm">info</span>
+                Compatible with ERC-20 networks only.
+              </div>
+</div>
+</div>
+<!-- Right QR Side -->
+<div class="w-full md:w-80 bg-surface-container-low p-8 flex flex-col items-center justify-center">
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary/5 rounded-2xl blur-xl group-hover:bg-primary/10 transition-all duration-500"></div>
+<div class="relative bg-white p-3 rounded-xl shadow-2xl">
+<img alt="Deposit QR Code" class="w-40 h-40" data-alt="A minimalist QR code centered on a clean white background with subtle digital artifacts" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDbXUzlXqcQmNJQkDW582JSyFlxNEUp2abE2kFFF06q9U5La45TA5Mp-kSt0DDQD4zWbkXAUZVsI9zb8cc_tkt5ARDDwWqrcvgpnkqoYTqfUBPkxUFtxew4ZUQhd7iDFFQO-LofLZxwRtrTNo8T3d1pQVwMhJSZkloNlxQPkTnQ_3I3hSAUGZXC9Vn1Sn5gKxsx0gmT_RGyqFJ8VyLt_zES3v6_DNHjD6Anv4nZOLzoHtqLnzc3nZ5y-qJQCe9L32hPg_rFKWcZCA"/>
+</div>
+</div>
+<div class="mt-8 text-center">
+<span class="text-xs font-label uppercase tracking-[0.2em] text-on-surface-variant block mb-1">Scan to Deposit</span>
+<p class="text-[10px] text-on-surface-variant/50 max-w-[160px]">Verification usually takes 3-5 network confirmations</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-2xl md:hidden bg-[#131318]/90 backdrop-blur-lg shadow-[0_-8px_32px_rgba(0,0,0,0.8)] border-t border-white/5">
+<div class="flex justify-around items-center pt-3 pb-6 px-4">
+<a class="flex flex-col items-center justify-center text-[#acaab1] opacity-60 hover:opacity-100 hover:text-[#8ff5ff] active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest mt-1">Console</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#8ff5ff] bg-[#25252c] rounded-xl px-4 py-1.5 shadow-[0_0_15px_rgba(143,245,255,0.15)] active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shopping_bag</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest mt-1">Store</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#acaab1] opacity-60 hover:opacity-100 hover:text-[#8ff5ff] active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">sports_esports</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest mt-1">Play</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#acaab1] opacity-60 hover:opacity-100 hover:text-[#8ff5ff] active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest mt-1">Prizes</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#acaab1] opacity-60 hover:opacity-100 hover:text-[#8ff5ff] active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest mt-1">Settings</span>
+</a>
+</div>
+</nav>
+</body></html>

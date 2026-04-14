@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-on-surface": "#55545a",
+              "inverse-primary": "#006a71",
+              "on-error": "#490013",
+              "surface-variant": "#25252c",
+              "surface-container-highest": "#25252c",
+              "primary-fixed": "#00eefc",
+              "inverse-surface": "#fbf8ff",
+              "surface-container-low": "#131318",
+              "on-error-container": "#ffb2b9",
+              "error": "#ff6e84",
+              "surface-container-high": "#1f1f26",
+              "tertiary-container": "#ffd709",
+              "secondary-dim": "#bb00fc",
+              "on-secondary-fixed-variant": "#8400b3",
+              "tertiary-fixed-dim": "#efc900",
+              "secondary-fixed-dim": "#eaaeff",
+              "on-tertiary": "#655400",
+              "primary": "#8ff5ff",
+              "primary-dim": "#00deec",
+              "secondary": "#d674ff",
+              "on-surface": "#f8f5fd",
+              "surface-dim": "#0e0e13",
+              "error-container": "#a70138",
+              "error-dim": "#d73357",
+              "surface": "#0e0e13",
+              "on-secondary-fixed": "#580079",
+              "on-tertiary-fixed": "#453900",
+              "tertiary": "#ffe792",
+              "on-primary-fixed": "#003f43",
+              "on-primary-container": "#005359",
+              "on-primary": "#005d63",
+              "on-tertiary-container": "#5b4b00",
+              "surface-tint": "#8ff5ff",
+              "secondary-container": "#9900cf",
+              "on-surface-variant": "#acaab1",
+              "on-background": "#f8f5fd",
+              "on-secondary": "#390050",
+              "background": "#0e0e13",
+              "on-secondary-container": "#fff5fc",
+              "outline": "#76747b",
+              "outline-variant": "#48474d",
+              "surface-container-lowest": "#000000",
+              "primary-container": "#00eefc",
+              "surface-bright": "#2c2b33",
+              "primary-fixed-dim": "#00deec",
+              "surface-container": "#19191f",
+              "on-primary-fixed-variant": "#005e64",
+              "on-tertiary-fixed-variant": "#665500",
+              "secondary-fixed": "#f1c1ff",
+              "tertiary-dim": "#efc900",
+              "tertiary-fixed": "#ffd709"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #0e0e13;
+            color: #f8f5fd;
+            font-family: 'Manrope', sans-serif;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .glass-card {
+            background: rgba(31, 31, 38, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(143, 245, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="bg-[#0e0e13]/80 backdrop-blur-xl fixed top-0 w-full z-50 no-border shadow-[0_1px_20px_rgba(0,0,0,0.5)]">
+<div class="flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full overflow-hidden border border-primary/20">
+<img alt="User Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPlrJ0F_BAIKgGw9Gy3UECwcvk8jqHgRelBlxP4WjNKPF0foq8qpYNiWyoW_mkvBL8mMLvjt4Qw_jACuswcczihC-1_9dJCm13FZzD0-lTNxQDvnM5Db6VZi2kYBb8cqvPqBOeFOxOeRdG_mGZq98byZIYbTz1XbdfIzx37C-IiLdrbUVzysXnBssePe69E-rUCgxvjf3hoTyTK-ZPYWutHE31wFj_PAwA5DmTxfiMJoPMliRCV7NEfQSLf0xnxGw7JHj4nYHILy8"/>
+</div>
+<h1 class="text-2xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-[#8ff5ff] to-[#00eefc] font-headline uppercase">KINETIC</h1>
+</div>
+<div class="text-[#8ff5ff] font-headline tracking-tight uppercase text-xs">
+                Fate: 1,200 | EN
+            </div>
+</div>
+</header>
+<!-- Navigation Drawer (Desktop Hidden on Mobile) -->
+<nav class="fixed left-0 top-0 h-full w-72 hidden md:block bg-[#131318] no-border shadow-[20px_0_60px_rgba(0,0,0,0.5)] z-40">
+<div class="flex flex-col h-full py-8">
+<div class="px-8 mb-10">
+<div class="font-headline text-[#8ff5ff] font-black italic text-2xl tracking-tighter">KINETIC</div>
+</div>
+<div class="flex flex-col gap-1">
+<a class="text-[#acaab1] px-6 py-4 opacity-70 hover:bg-[#1f1f26] hover:text-[#ffffff] transition-all flex items-center gap-4" href="#">
+<span class="material-symbols-outlined">dashboard</span> Console
+                </a>
+<a class="text-[#acaab1] px-6 py-4 opacity-70 hover:bg-[#1f1f26] hover:text-[#ffffff] transition-all flex items-center gap-4" href="#">
+<span class="material-symbols-outlined">shopping_bag</span> Store
+                </a>
+<a class="text-[#acaab1] px-6 py-4 opacity-70 hover:bg-[#1f1f26] hover:text-[#ffffff] transition-all flex items-center gap-4" href="#">
+<span class="material-symbols-outlined">sports_esports</span> Game Entry
+                </a>
+<a class="bg-gradient-to-r from-[#8ff5ff]/10 to-transparent border-l-4 border-[#8ff5ff] text-[#8ff5ff] font-bold px-6 py-4 flex items-center gap-4" href="#">
+<span class="material-symbols-outlined">receipt_long</span> Prize Inquiry
+                </a>
+<a class="text-[#acaab1] px-6 py-4 opacity-70 hover:bg-[#1f1f26] hover:text-[#ffffff] transition-all flex items-center gap-4" href="#">
+<span class="material-symbols-outlined">settings</span> User Settings
+                </a>
+</div>
+</div>
+</nav>
+<main class="pt-24 px-4 md:ml-72 md:px-12 max-w-4xl mx-auto">
+<!-- Hero Section / Title -->
+<section class="mb-10">
+<div class="flex flex-col gap-1">
+<h2 class="text-4xl font-headline font-bold tracking-tight text-on-surface">Prize Inquiry</h2>
+</div>
+<div class="mt-8 glass-card rounded-xl p-6 relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none"></div>
+<div class="relative z-10 flex justify-between items-end">
+<div>
+<p class="text-on-surface-variant font-label text-[10px] uppercase tracking-widest mb-1">Current Balance</p>
+<p class="text-3xl font-headline font-extrabold text-primary">1,200 <span class="text-sm font-normal">FATE</span></p>
+</div>
+<div class="bg-surface-container-highest p-3 rounded-lg border border-outline-variant/20 shadow-[0_0_15px_rgba(143,245,255,0.1)]">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">stars</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Session List -->
+<section class="space-y-4">
+<div class="flex justify-between items-center px-2 mb-2">
+<h3 class="font-headline text-lg font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">history</span>
+                    Recent Sessions
+                </h3>
+<span class="text-on-surface-variant text-[10px] font-label tracking-widest uppercase">Sort: Latest</span>
+</div>
+<!-- List Item 1 (Expanded) -->
+<div class="glass-card rounded-xl overflow-hidden transition-all duration-300 shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
+<div class="p-5 flex justify-between items-center cursor-pointer">
+<div class="flex flex-col">
+<span class="text-primary font-headline font-bold text-lg tracking-tight">CYBER-GENESIS #082</span>
+<div class="flex gap-4 mt-1">
+<span class="text-on-surface-variant text-[10px] font-label font-medium">2024-05-24</span>
+<span class="text-on-surface-variant text-[10px] font-label font-medium">22:00 UTC</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary">expand_less</span>
+</div>
+<!-- Expanded Content -->
+<div class="px-5 pb-6 border-t border-outline-variant/10 bg-surface-container/30">
+<div class="grid grid-cols-2 gap-4 mt-6">
+<div class="bg-surface-container-highest/50 border border-outline-variant/10 p-4 rounded-lg">
+<p class="text-[10px] text-on-surface-variant uppercase tracking-tighter mb-1">Prize Tier</p>
+<p class="text-tertiary font-headline font-bold text-lg italic tracking-wide">GRAND PRIZE</p>
+</div>
+<div class="bg-surface-container-highest/50 border border-outline-variant/10 p-4 rounded-lg">
+<p class="text-[10px] text-on-surface-variant uppercase tracking-tighter mb-1">Runestones</p>
+<p class="text-primary font-headline font-bold text-lg">5,000 <span class="text-xs font-normal">RS</span></p>
+</div>
+</div>
+<div class="mt-6">
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest mb-3 flex items-center gap-2">
+                            List of Winners
+                            <span class="h-px flex-1 bg-outline-variant/20"></span>
+</p>
+<div class="max-h-48 overflow-y-auto pr-2 hide-scrollbar space-y-2">
+<div class="flex justify-between items-center py-2.5 px-3 bg-primary/5 border border-primary/10 rounded-md">
+<span class="font-label text-sm font-semibold text-primary">PILOT_9921 (YOU)</span>
+<span class="text-primary text-[10px] font-headline font-bold tracking-widest bg-primary/10 px-2 py-0.5 rounded">WINNER</span>
+</div>
+<div class="flex justify-between items-center py-2.5 px-3 bg-surface/40 border border-outline-variant/5 rounded-md">
+<span class="font-label text-sm text-on-surface-variant">XENON_CORE</span>
+<span class="text-on-surface-variant text-[10px] font-headline font-bold tracking-widest">WINNER</span>
+</div>
+<div class="flex justify-between items-center py-2.5 px-3 bg-surface/40 border border-outline-variant/5 rounded-md">
+<span class="font-label text-sm text-on-surface-variant">DRIFT_KING</span>
+<span class="text-on-surface-variant text-[10px] font-headline font-bold tracking-widest">WINNER</span>
+</div>
+<div class="flex justify-between items-center py-2.5 px-3 bg-surface/40 border border-outline-variant/5 rounded-md">
+<span class="font-label text-sm text-on-surface-variant">NEON_PUNK</span>
+<span class="text-on-surface-variant text-[10px] font-headline font-bold tracking-widest">WINNER</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- List Item 2 (Collapsed) -->
+<div class="glass-card rounded-xl overflow-hidden hover:bg-surface-container-high transition-colors group">
+<div class="p-5 flex justify-between items-center cursor-pointer">
+<div class="flex flex-col">
+<span class="text-on-surface group-hover:text-primary transition-colors font-headline font-bold text-lg tracking-tight">NEON-OVERDRIVE #081</span>
+<div class="flex gap-4 mt-1">
+<span class="text-on-surface-variant text-[10px] font-label">2024-05-23</span>
+<span class="text-on-surface-variant text-[10px] font-label">21:00 UTC</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">expand_more</span>
+</div>
+</div>
+<!-- List Item 3 (Collapsed) -->
+<div class="glass-card rounded-xl overflow-hidden hover:bg-surface-container-high transition-colors group">
+<div class="p-5 flex justify-between items-center cursor-pointer">
+<div class="flex flex-col">
+<span class="text-on-surface group-hover:text-primary transition-colors font-headline font-bold text-lg tracking-tight">VOID-PULSE #080</span>
+<div class="flex gap-4 mt-1">
+<span class="text-on-surface-variant text-[10px] font-label">2024-05-22</span>
+<span class="text-on-surface-variant text-[10px] font-label">21:30 UTC</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">expand_more</span>
+</div>
+</div>
+<!-- List Item 4 (Collapsed) -->
+<div class="glass-card rounded-xl overflow-hidden hover:bg-surface-container-high transition-colors group">
+<div class="p-5 flex justify-between items-center cursor-pointer">
+<div class="flex flex-col">
+<span class="text-on-surface group-hover:text-primary transition-colors font-headline font-bold text-lg tracking-tight">ZENITH-DRAKE #079</span>
+<div class="flex gap-4 mt-1">
+<span class="text-on-surface-variant text-[10px] font-label">2024-05-21</span>
+<span class="text-on-surface-variant text-[10px] font-label">20:00 UTC</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">expand_more</span>
+</div>
+</div>
+</section>
+<!-- Pagination/Load More -->
+<div class="mt-8 flex justify-center">
+<button class="bg-surface-container-highest text-primary font-label text-[10px] font-bold uppercase tracking-widest px-8 py-3 rounded-md border border-primary/20 hover:bg-primary/10 hover:border-primary/40 active:scale-95 transition-all flex items-center gap-2">
+                Load More
+                <span class="material-symbols-outlined text-sm">keyboard_double_arrow_down</span>
+</button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-2xl md:hidden bg-[#131318]/90 backdrop-blur-lg border-t border-outline-variant/10 shadow-[0_-8px_32px_rgba(0,0,0,0.8)]">
+<div class="flex justify-around items-center pt-3 pb-6 px-4">
+<a class="flex flex-col items-center justify-center text-[#acaab1] opacity-60 hover:opacity-100 hover:text-[#8ff5ff] active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-['Inter'] text-[9px] uppercase tracking-widest mt-1">Console</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#acaab1] opacity-60 hover:opacity-100 hover:text-[#8ff5ff] active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="font-['Inter'] text-[9px] uppercase tracking-widest mt-1">Store</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#acaab1] opacity-60 hover:opacity-100 hover:text-[#8ff5ff] active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">sports_esports</span>
+<span class="font-['Inter'] text-[9px] uppercase tracking-widest mt-1">Play</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#8ff5ff] bg-primary/10 rounded-xl px-4 py-1.5 shadow-[0_0_15px_rgba(143,245,255,0.1)] active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">receipt_long</span>
+<span class="font-['Inter'] text-[9px] font-bold uppercase tracking-widest mt-1">Prizes</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#acaab1] opacity-60 hover:opacity-100 hover:text-[#8ff5ff] active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-['Inter'] text-[9px] uppercase tracking-widest mt-1">Settings</span>
+</a>
+</div>
+</nav>
+</body></html>

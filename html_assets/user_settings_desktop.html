@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kinetic | User Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary": "#005d63",
+                        "tertiary-fixed-dim": "#efc900",
+                        "surface-variant": "#25252c",
+                        "surface-dim": "#0e0e13",
+                        "on-tertiary-fixed": "#453900",
+                        "tertiary": "#ffe792",
+                        "secondary-fixed": "#f1c1ff",
+                        "surface-container-low": "#131318",
+                        "surface": "#0e0e13",
+                        "on-background": "#f8f5fd",
+                        "primary-fixed-dim": "#00deec",
+                        "surface-container": "#19191f",
+                        "inverse-surface": "#fbf8ff",
+                        "outline-variant": "#48474d",
+                        "error-container": "#a70138",
+                        "surface-bright": "#2c2b33",
+                        "inverse-primary": "#006a71",
+                        "secondary-fixed-dim": "#eaaeff",
+                        "secondary-container": "#9900cf",
+                        "secondary": "#d674ff",
+                        "outline": "#76747b",
+                        "secondary-dim": "#bb00fc",
+                        "tertiary-dim": "#efc900",
+                        "on-secondary-container": "#fff5fc",
+                        "inverse-on-surface": "#55545a",
+                        "on-tertiary-fixed-variant": "#665500",
+                        "on-error": "#490013",
+                        "on-surface-variant": "#acaab1",
+                        "primary": "#8ff5ff",
+                        "primary-fixed": "#00eefc",
+                        "tertiary-fixed": "#ffd709",
+                        "tertiary-container": "#ffd709",
+                        "on-secondary": "#390050",
+                        "on-secondary-fixed-variant": "#8400b3",
+                        "on-primary-fixed": "#003f43",
+                        "on-error-container": "#ffb2b9",
+                        "background": "#0e0e13",
+                        "on-tertiary-container": "#5b4b00",
+                        "primary-container": "#00eefc",
+                        "surface-container-lowest": "#000000",
+                        "primary-dim": "#00deec",
+                        "surface-tint": "#8ff5ff",
+                        "on-primary-container": "#005359",
+                        "on-primary-fixed-variant": "#005e64",
+                        "error": "#ff6e84",
+                        "on-surface": "#f8f5fd",
+                        "surface-container-high": "#1f1f26",
+                        "surface-container-highest": "#25252c",
+                        "on-tertiary": "#655400",
+                        "on-secondary-fixed": "#580079",
+                        "error-dim": "#d73357"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Manrope"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #0e0e13;
+            color: #f8f5fd;
+            font-family: 'Manrope', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(31, 31, 38, 0.7);
+            backdrop-filter: blur(12px);
+        }
+        .king-glow-gold {
+            box-shadow: 0 0 20px rgba(255, 231, 146, 0.15);
+        }
+    </style>
+</head>
+<body class="overflow-hidden">
+<!-- SideNavBar (Shared Component) -->
+<nav class="h-screen w-64 fixed left-0 top-0 z-40 bg-[#131318] border-r border-[#48474d]/20 flex flex-col h-full py-8 shadow-2xl shadow-black transition-all duration-300 ease-in-out font-['Space_Grotesk'] text-base tracking-wide">
+<div class="px-8 mb-12">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-gradient-to-br from-[#8ff5ff] to-[#00eefc] flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary text-xl">bolt</span>
+</div>
+<div>
+<h1 class="text-xl font-black text-[#8ff5ff] italic">KINETIC</h1>
+<p class="text-[10px] text-on-surface-variant tracking-widest uppercase">Aetheris Prime</p>
+</div>
+</div>
+</div>
+<div class="flex-1 space-y-1">
+<a class="flex items-center gap-4 text-[#acaab1] px-6 py-4 hover:translate-x-1 transition-transform hover:bg-[#1f1f26] hover:text-[#8ff5ff] group" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="dashboard">dashboard</span>
+<span>Console</span>
+</a>
+<a class="flex items-center gap-4 text-[#acaab1] px-6 py-4 hover:translate-x-1 transition-transform hover:bg-[#1f1f26] hover:text-[#8ff5ff] group" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="shopping_bag">shopping_bag</span>
+<span>Store</span>
+</a>
+<a class="flex items-center gap-4 text-[#acaab1] px-6 py-4 hover:translate-x-1 transition-transform hover:bg-[#1f1f26] hover:text-[#8ff5ff] group" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="sports_esports">sports_esports</span>
+<span>Game Entry</span>
+</a>
+<a class="flex items-center gap-4 text-[#acaab1] px-6 py-4 hover:translate-x-1 transition-transform hover:bg-[#1f1f26] hover:text-[#8ff5ff] group" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="military_tech">military_tech</span>
+<span>Prize Inquiry</span>
+</a>
+<!-- ACTIVE STATE: User Settings -->
+<a class="flex items-center gap-4 bg-gradient-to-r from-[#8ff5ff]/10 to-transparent text-[#8ff5ff] border-l-4 border-[#8ff5ff] px-6 py-4 group" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="settings">settings</span>
+<span class="font-bold">User Settings</span>
+</a>
+</div>
+<div class="px-6 mt-auto">
+<button class="w-full py-4 bg-gradient-to-r from-[#8ff5ff] to-[#00eefc] text-on-primary font-bold rounded-md active:scale-95 transition-all shadow-[0_0_20px_rgba(143,245,255,0.3)]">
+                LAUNCH GAME
+            </button>
+</div>
+</nav>
+<!-- TopNavBar (Shared Component) -->
+<header class="fixed top-0 right-0 left-64 z-50 bg-[#0e0e13]/70 backdrop-blur-xl flex justify-between items-center px-8 py-4 shadow-[0_4px_30px_rgba(143,245,255,0.08)] font-['Space_Grotesk'] tracking-tight text-sm uppercase">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-6">
+<span class="text-[#acaab1]">Fate Points: <span class="text-[#8ff5ff] font-bold">2,500</span></span>
+<span class="text-[#acaab1]">VIP Level: <span class="text-tertiary font-bold italic">4</span></span>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="relative text-[#acaab1] hover:text-[#8ff5ff] transition-colors p-2 rounded-full hover:bg-[#25252c]">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 bg-[#8ff5ff] rounded-full border-2 border-[#0e0e13]"></span>
+</button>
+<button class="text-[#acaab1] hover:text-[#8ff5ff] transition-colors p-2 rounded-full hover:bg-[#25252c]">
+<span class="material-symbols-outlined" data-icon="account_balance_wallet">account_balance_wallet</span>
+</button>
+<div class="flex items-center gap-3 pl-4 border-l border-[#48474d]/30">
+<div class="text-right">
+<p class="text-[#f8f5fd] font-bold leading-none tracking-normal normal-case font-body">Xenon_Rider</p>
+<p class="text-[#acaab1] text-[10px] uppercase font-label">Elite Operative</p>
+</div>
+<img alt="User Profile Avatar" class="w-10 h-10 rounded-full border-2 border-[#8ff5ff]/30 object-cover" data-alt="portrait of a futuristic gamer with neon lighting highlights on their face against a dark tech background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAQ3Fr8Mr9aq26UVNYOLCiyn9jlv6YWxe6Gzoe59xgeTikJSbof--ugjHgnf2fhw1iOI3SbsEy0kCFBWPkt5txj-qH1Cl_fvqqJWzHnb54rlx6WeJtaldI4J23Neuee0ByjOiQxsrVOKqebACR3IpszpoBfkVwS-jYWYoQsCJtnEtG2fdo-0V8Pxuwuop7SUN0d-5GzTN85e4gF3DiIHbhk4hrccX9HmFl2cU0RKCSps-fDK3C0mDByiW08MmDBYqPKqjSOqF7UDo"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-64 pt-20 h-screen overflow-y-auto bg-surface-dim">
+<div class="max-w-6xl mx-auto p-12">
+<div class="mb-12">
+<h2 class="text-4xl font-headline font-black tracking-tight text-on-background mb-2">SYSTEM CONFIGURATION</h2>
+<p class="text-on-surface-variant font-body">Manage your digital identity and operative preferences.</p>
+</div>
+<div class="grid grid-cols-12 gap-8">
+<!-- Profile Section (Bento Main) -->
+<div class="col-span-8 space-y-8">
+<!-- Identity Card -->
+<div class="bg-surface-container-high rounded-xl p-8 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-8xl" data-icon="badge">badge</span>
+</div>
+<div class="relative z-10">
+<h3 class="text-xl font-headline font-bold text-primary mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+                                OPERATIVE IDENTITY
+                            </h3>
+<div class="flex gap-10 items-start">
+<div class="relative">
+<div class="w-32 h-32 rounded-xl overflow-hidden border-2 border-primary shadow-[0_0_15px_rgba(143,245,255,0.2)]">
+<img alt="Current Avatar" class="w-full h-full object-cover" data-alt="high contrast studio portrait of a young man with futuristic blue neon lighting and sharp shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZEf4AIyQLb68DEIF0s7HyxjdTpPTD9ZOwjmiWZX5O5wogUu__ZMcq4R_BIpfPrZMQK9m3KY03R3Bto6yyaS2EKbYC3zvBRQjUT5wWi8g-7WIZGgTSpOVOJnpK3ZL8HLOEWehYvyYMCqq_s7pDaj9QqOzj0kg4eFzhZNQqGtXpP81gzxIsTSzoYe0skCeWEyDcRfzaUHZG7l3HXIi_nVuU8ulrvo-CBPq16SGk_JOybXLhOQlkc6SjFO8x_xoUUKlbQdJWeGcRDMI"/>
+</div>
+<button class="absolute -bottom-2 -right-2 bg-primary text-on-primary w-8 h-8 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-sm" data-icon="photo_camera">photo_camera</span>
+</button>
+</div>
+<div class="flex-1 space-y-6">
+<div class="space-y-2">
+<label class="text-xs font-label uppercase tracking-widest text-on-surface-variant">Operative Nickname</label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest border-none rounded-md px-4 py-3 text-on-background focus:ring-1 focus:ring-primary font-headline tracking-wide" type="text" value="Xenon_Rider"/>
+<span class="absolute right-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline text-sm" data-icon="edit">edit</span>
+</div>
+</div>
+<div class="space-y-3">
+<label class="text-xs font-label uppercase tracking-widest text-on-surface-variant">Avatar Gallery</label>
+<div class="flex gap-3">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest border border-primary/40 p-1 cursor-pointer hover:border-primary transition-colors">
+<img class="w-full h-full object-cover rounded" data-alt="cyberpunk character avatar in neon light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBX2yyGhcBvPaSldz_Oq6-1hDZsAtn0b2wFkK7-TCyotTysZd64Dk8paEqhPelQO6j6NAEvBdyCAlOro05el3xj7NdCOT5I6UX8euMDP4hIDCqmmgL8euZsPP-z8NBdDsuC6cjiKlgDKum4nrbOaUnIFVYy3pHp6gU_PIjF493ZcWiFvv00kB2TC0R-MmoI4wCM1msXiSIdCB1p81y6Mx2A9ZaEVJaCvahbZPE-5rhZ59oP_eXg57JgIZA3xlQDEDiAz7rWvxJeisM"/>
+</div>
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest border border-outline-variant/40 p-1 cursor-pointer hover:border-primary transition-colors">
+<img class="w-full h-full object-cover rounded" data-alt="hacker profile picture with digital overlay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAphoJrFyiV1Yi9GKDR_9CVXdaKm77kX8xfhpNwwvvUOzpn5oWw2S3YSXAyBXDk8asF4Dt5R0XoSXZkFpDBLbIT5weQD7jcpjBq08R3PpWy_KvNhzLCyRveQ4AWsbHsq1qMNOGK3QLzjHJSUlAF7lej4O5hM3f21zTcbMHg4HWFcHUMfN0NwAllIbzg8h13ubPEPLmp8Eb2UxcAinIfP9E2GPUgroyPjR-6vGV9iz8tdjgYrQeyf72pmZQ558rd_w1lKr7xATIjHZQ"/>
+</div>
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest border border-outline-variant/40 p-1 cursor-pointer hover:border-primary transition-colors">
+<img class="w-full h-full object-cover rounded" data-alt="minimalist sci-fi silhouette avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLHC2bVzRH4ui9XWT7crzG2zI88IzDltD8kMbi6DIlJHVb8QDMVcd8FssBJqZY0zsTteylLTabM_NgePaxkFhU5cEx_BhKLdYOPpqBOqE7O7jwm2E5HuOG7JvSSKGrjIUS5jqQlvLF3AuV5VuHG31bEsZKwWuinogQr-lThyLdu8O57qtKJr03EV_3g3mTv2MgWAibjLAkq-G6aQg66C8KvaSb8kBSveRzsuEPuP4KTzh42rI37vke17TUc6PdysgmJBEdyFwjsgA"/>
+</div>
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest border border-outline-variant/40 p-1 cursor-pointer hover:border-primary transition-colors">
+<img class="w-full h-full object-cover rounded" data-alt="retro technology inspired profile icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsIjTMuhlAFcN9k_cal0pSy77rKBJzaY3f1kbCZr-7Uy6H8T7XO6PLJox9fOMWT9Ksk3SiJ9HUHMC1oP_MJ78T4P_O2NWMZ2HBJ_LRLwhB6gdjfuXN5VzEn3mncKx1HkA24kJl7BICbYeFAz0DB-SrlrAp_0Plt65fjhD9F4FqwarC32e6r45et2Kp7v4uvXLggiLA3smKJyF8fgX7NAGzci0l_mzt9E5Gkmg-n85RgoP7FUMyztILeL0KyLWPl1d9BlXzbuL3yrY"/>
+</div>
+<button class="w-12 h-12 rounded-lg bg-surface-container-highest border border-dashed border-outline-variant flex items-center justify-center text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Stats Row -->
+<div class="grid grid-cols-3 gap-6">
+<div class="bg-surface-container-low p-6 rounded-xl border-l-2 border-primary-dim">
+<p class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant mb-1">Combat Hours</p>
+<p class="text-3xl font-headline font-black text-on-background">1,248<span class="text-sm font-light text-outline ml-1">h</span></p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl border-l-2 border-tertiary">
+<p class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant mb-1">Win Ratio</p>
+<p class="text-3xl font-headline font-black text-on-background">64.2<span class="text-sm font-light text-outline ml-1">%</span></p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl border-l-2 border-secondary">
+<p class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant mb-1">Elite Rank</p>
+<p class="text-3xl font-headline font-black text-on-background">DIAMOND IV</p>
+</div>
+</div>
+<!-- Placeholder Future Sections -->
+<div class="grid grid-cols-2 gap-8">
+<!-- Security -->
+<div class="bg-surface-container-high rounded-xl p-8 border border-outline-variant/10 group hover:border-primary/20 transition-colors">
+<div class="flex justify-between items-start mb-6">
+<div class="bg-surface-container-highest p-3 rounded-lg text-primary">
+<span class="material-symbols-outlined" data-icon="security">security</span>
+</div>
+<span class="px-2 py-1 rounded text-[10px] font-bold bg-surface-container-highest text-outline uppercase tracking-tighter">Encrypted</span>
+</div>
+<h4 class="text-lg font-headline font-bold text-on-background mb-2">Security &amp; Access</h4>
+<p class="text-sm text-on-surface-variant mb-6">Update credentials, manage 2FA, and review authorized devices.</p>
+<button class="text-primary text-sm font-bold flex items-center gap-2 group-hover:translate-x-1 transition-transform">
+                                CONFIG_ACCESS <span class="material-symbols-outlined text-xs" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Notifications -->
+<div class="bg-surface-container-high rounded-xl p-8 border border-outline-variant/10 group hover:border-primary/20 transition-colors">
+<div class="flex justify-between items-start mb-6">
+<div class="bg-surface-container-highest p-3 rounded-lg text-secondary">
+<span class="material-symbols-outlined" data-icon="notifications_active">notifications_active</span>
+</div>
+<span class="px-2 py-1 rounded text-[10px] font-bold bg-surface-container-highest text-outline uppercase tracking-tighter">Active</span>
+</div>
+<h4 class="text-lg font-headline font-bold text-on-background mb-2">Neural Alerts</h4>
+<p class="text-sm text-on-surface-variant mb-6">Customize in-game pings, community updates, and system news.</p>
+<button class="text-secondary text-sm font-bold flex items-center gap-2 group-hover:translate-x-1 transition-transform">
+                                MANAGE_PULSE <span class="material-symbols-outlined text-xs" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Sidebar Settings (Bento Side) -->
+<div class="col-span-4 space-y-8">
+<!-- Language & Region -->
+<div class="bg-surface-container-high rounded-xl p-8">
+<h3 class="text-sm font-headline font-bold text-on-background mb-6 flex items-center gap-2 uppercase tracking-widest">
+<span class="material-symbols-outlined text-primary text-base" data-icon="language">language</span>
+                            Localization
+                        </h3>
+<div class="space-y-4">
+<div class="p-4 bg-surface-container-highest rounded-lg border-l-2 border-primary">
+<div class="flex justify-between items-center">
+<span class="text-xs font-label text-on-surface-variant uppercase">Interface Language</span>
+<span class="text-sm font-bold">English (US)</span>
+</div>
+</div>
+<div class="p-4 bg-surface-container-low rounded-lg hover:bg-surface-container-highest transition-colors cursor-pointer group">
+<div class="flex justify-between items-center">
+<span class="text-xs font-label text-on-surface-variant uppercase">Timezone</span>
+<span class="text-sm group-hover:text-primary transition-colors">UTC-07:00</span>
+</div>
+</div>
+</div>
+</div>
+<!-- App Info / Status -->
+<div class="bg-gradient-to-br from-surface-container-high to-surface-container-low rounded-xl p-8 border border-outline-variant/10">
+<h3 class="text-sm font-headline font-bold text-on-background mb-6 flex items-center gap-2 uppercase tracking-widest">
+<span class="material-symbols-outlined text-tertiary text-base" data-icon="info">info</span>
+                            Environment
+                        </h3>
+<div class="space-y-4 text-xs font-label">
+<div class="flex justify-between py-2 border-b border-outline-variant/10">
+<span class="text-on-surface-variant">Version</span>
+<span class="text-on-background font-mono">2.4.12-PROD</span>
+</div>
+<div class="flex justify-between py-2 border-b border-outline-variant/10">
+<span class="text-on-surface-variant">Server Path</span>
+<span class="text-primary">Aetheris_Prime_West</span>
+</div>
+<div class="flex justify-between py-2">
+<span class="text-on-surface-variant">Last Login</span>
+<span class="text-on-background">2024-05-20 14:02</span>
+</div>
+</div>
+<div class="mt-8">
+<button class="w-full py-3 bg-error/10 text-error border border-error/20 rounded-md font-bold text-xs hover:bg-error hover:text-on-error transition-all uppercase tracking-widest">
+                                DEACTIVATE OPERATIVE
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Action Action (Contextual: User Settings -> No FAB as per suppression mandate) -->
+</body></html>

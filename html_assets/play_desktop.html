@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kinetic | Game Entry</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#f1c1ff",
+                        "tertiary-dim": "#efc900",
+                        "on-surface": "#f8f5fd",
+                        "on-primary-fixed": "#003f43",
+                        "on-primary-container": "#005359",
+                        "error-dim": "#d73357",
+                        "outline-variant": "#48474d",
+                        "inverse-on-surface": "#55545a",
+                        "primary-dim": "#00deec",
+                        "on-error-container": "#ffb2b9",
+                        "outline": "#76747b",
+                        "surface-tint": "#8ff5ff",
+                        "tertiary-fixed": "#ffd709",
+                        "surface-variant": "#25252c",
+                        "tertiary-fixed-dim": "#efc900",
+                        "surface-container-lowest": "#000000",
+                        "surface-container-highest": "#25252c",
+                        "surface-container-high": "#1f1f26",
+                        "tertiary": "#ffe792",
+                        "primary-fixed": "#00eefc",
+                        "error": "#ff6e84",
+                        "secondary-fixed-dim": "#eaaeff",
+                        "secondary-container": "#9900cf",
+                        "primary-container": "#00eefc",
+                        "error-container": "#a70138",
+                        "surface": "#0e0e13",
+                        "tertiary-container": "#ffd709",
+                        "surface-container": "#19191f",
+                        "secondary-dim": "#bb00fc",
+                        "surface-dim": "#0e0e13",
+                        "on-secondary-container": "#fff5fc",
+                        "on-secondary-fixed-variant": "#8400b3",
+                        "on-primary": "#005d63",
+                        "on-secondary": "#390050",
+                        "surface-container-low": "#131318",
+                        "background": "#0e0e13",
+                        "primary-fixed-dim": "#00deec",
+                        "on-tertiary-fixed-variant": "#665500",
+                        "on-error": "#490013",
+                        "secondary": "#d674ff",
+                        "primary": "#8ff5ff",
+                        "on-primary-fixed-variant": "#005e64",
+                        "on-tertiary-container": "#5b4b00",
+                        "on-tertiary": "#655400",
+                        "surface-bright": "#2c2b33",
+                        "on-tertiary-fixed": "#453900",
+                        "inverse-primary": "#006a71",
+                        "on-surface-variant": "#acaab1",
+                        "inverse-surface": "#fbf8ff",
+                        "on-secondary-fixed": "#580079",
+                        "on-background": "#f8f5fd"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Manrope"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .font-headline { font-family: 'Space Grotesk', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom Scrollbar for Game List */
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        /* Tonal Cards */
+        .tonal-card {
+            background-color: #1f1f26;
+            transition: all 0.3s ease;
+        }
+        .tonal-card:hover {
+            background-color: #2c2b33;
+            box-shadow: 0 0 20px rgba(143, 245, 255, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary/30 min-h-screen flex overflow-hidden">
+<!-- Left Side Navigation -->
+<aside class="flex flex-col fixed left-0 top-0 h-full w-[240px] bg-[#0e0e13] border-r border-white/5 z-50">
+<div class="p-8">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary text-xl">bolt</span>
+<h1 class="text-xl font-bold tracking-tighter text-white font-headline uppercase">Kinetic</h1>
+</div>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant/60 font-medium">Aetheris Prime</p>
+</div>
+<nav class="flex-1 px-4 space-y-1 font-['Space_Grotesk']">
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">grid_view</span>
+<span class="text-sm font-medium">Console</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">shopping_bag</span>
+<span class="text-sm font-medium">Store</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-primary bg-primary/10 border-l-2 border-primary transition-all" href="#">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">videogame_asset</span>
+<span class="text-sm font-bold">Game Entry</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">military_tech</span>
+<span class="text-sm font-medium">Prize Inquiry</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">settings</span>
+<span class="text-sm font-medium">User Settings</span>
+</a>
+</nav>
+<div class="p-6">
+<div class="bg-surface-container-high rounded-xl p-4 flex items-center gap-3 border border-white/5">
+<div class="relative">
+<img alt="User Profile Avatar" class="w-10 h-10 rounded-lg object-cover" data-alt="close-up portrait of a futuristic gamer with neon reflections on visor, cinematic lighting, digital art style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpbcsumIHVHSWc4rEx60UTyCmjaphRI7vStTiljNBoyNChyNhANuyA84N7qQ9MHVGsbJ7vLrNco330nK_bvj48nj-WHYwYslS-TQMBFLVldXQ0zGA24dKYWvylhG8Bc_sdsZWR58K1MKjxg3l359DeV6RZA7hYxb77lb7ICLeBVHg7v2GeNIVPe7GEsN0WY5Mzus2ySpsS7ibTxPRcfB3NN3DDEUnpRjiHcb5OSTfJ6A8ITuyf7yf2lz__XRk382MHu0Ta5UoJRgs"/>
+<div class="absolute -bottom-1 -right-1 w-3 h-3 bg-green-500 border-2 border-[#131318] rounded-full"></div>
+</div>
+<div class="overflow-hidden">
+<p class="text-sm font-bold text-on-surface truncate">PILOT_01</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-tighter">Lvl 99 Catalyst</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Top App Bar -->
+<header class="flex items-center justify-between px-10 ml-[240px] bg-[#0e0e13] fixed top-0 h-[72px] border-b border-white/5 z-40 right-0 left-0">
+<div class="flex items-center gap-10">
+<span class="text-lg font-bold text-primary font-headline uppercase tracking-wide">Kinetic</span>
+<div class="flex items-center gap-2 text-on-surface-variant font-['Space_Grotesk'] uppercase tracking-widest text-[11px] font-bold">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span>Fate Points: 24,500</span>
+</div>
+<div class="text-on-surface-variant/40 text-[11px] font-bold uppercase tracking-widest">VIP Level: 4</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-on-surface-variant hover:text-white transition-all relative">
+<span class="material-symbols-outlined text-xl">notifications</span>
+<span class="absolute top-0 right-0 w-1.5 h-1.5 bg-primary rounded-full border border-[#0e0e13]"></span>
+</button>
+<button class="text-on-surface-variant hover:text-white transition-all">
+<span class="material-symbols-outlined text-xl">account_balance_wallet</span>
+</button>
+<div class="h-8 w-px bg-white/5 mx-2"></div>
+<button class="flex items-center gap-2 group">
+<img alt="User" class="w-8 h-8 rounded-full border border-white/10 group-hover:border-primary transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpbcsumIHVHSWc4rEx60UTyCmjaphRI7vStTiljNBoyNChyNhANuyA84N7qQ9MHVGsbJ7vLrNco330nK_bvj48nj-WHYwYslS-TQMBFLVldXQ0zGA24dKYWvylhG8Bc_sdsZWR58K1MKjxg3l359DeV6RZA7hYxb77lb7ICLeBVHg7v2GeNIVPe7GEsN0WY5Mzus2ySpsS7ibTxPRcfB3NN3DDEUnpRjiHcb5OSTfJ6A8ITuyf7yf2lz__XRk382MHu0Ta5UoJRgs"/>
+</button>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="ml-[240px] pt-[72px] h-screen flex flex-col relative overflow-hidden bg-[#0a0a0e]">
+<!-- Scrollable Game Section -->
+<section class="flex-1 p-12 overflow-y-auto pb-48">
+<header class="mb-12">
+<h2 class="text-5xl font-black font-headline tracking-tighter text-on-surface mb-2">SIMULATION ENTRIES</h2>
+<p class="text-on-surface-variant font-medium max-w-xl">Initialize your neural link. Select a high-fidelity simulation to begin the synchronization process.</p>
+</header>
+<div class="flex overflow-x-auto gap-8 pb-12 hide-scrollbar snap-x snap-mandatory">
+<!-- Game Card 1 -->
+<div class="flex-shrink-0 w-[420px] snap-start">
+<div class="tonal-card rounded-xl overflow-hidden group border border-white/5">
+<div class="relative h-[580px]">
+<img alt="Neon Overdrive Game Art" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="futuristic cyberpunk city at night with neon lights, high speed light trails, and sleek hovercars, cinematic composition" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcgPAJydTH51FPR4I8vLLsoPpgUZV64bYMhPZ3m9c6pbY4X5c9jn6GBVWVTjGKAXZvbrsrMZv4OjxSEd2i-EJLZGyZW3Qs3Guo1o9et9lbJe0dyIbcna9GDW6K8euWYHcFm3KaDgXnPRLkj5APQceonNdyEqdXuRvhZ5V1Av9RJz5tUQk0WUxxC0o_Gp2LAVjYOJPJ87B0whWaUngEvS3hqVmf7_cq-Bo9oNcZwtbykWpNkoUvwgtnQWAtecsQT6OEQ0X-3xjiVug"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0e] via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<span class="bg-primary/20 text-primary text-[10px] font-bold px-2 py-1 rounded-sm border border-primary/30 uppercase tracking-widest mb-4 inline-block">High Intensity</span>
+<h3 class="text-3xl font-black font-headline text-white mb-2">NEON OVERDRIVE</h3>
+<p class="text-sm text-on-surface-variant line-clamp-2 mb-6">Master the velocity of light in this high-speed neural traversal through the grid.</p>
+<button class="w-full py-4 bg-primary text-on-primary font-bold rounded-xl flex items-center justify-center gap-2 hover:brightness-110 transition-all">
+<span class="material-symbols-outlined">bolt</span>
+                                QUICK MATCH
+                            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Game Card 2 -->
+<div class="flex-shrink-0 w-[420px] snap-start">
+<div class="tonal-card rounded-xl overflow-hidden group border border-white/5">
+<div class="relative h-[580px]">
+<img alt="Tactical Zero Game Art" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="advanced tactical combat specialist in high-tech exoskeleton standing in a rain-slicked industrial hangar, blue ambient glow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-dzC3g_xPt5OiSs2P0yV8v0Eu6RFH93aGe5dItVdLBJaCUoM8fMp7XY8Q7BxcXPzDSbiq_ma5M1mpwBwNx91mx2_LaTiEfKri4cYGyUbbvTZu4ZUS3WXwA8-B-tzTfjSWnHP-XKZykPF5ilobyV4olA-aMF7R3jP3FUF68kAXewJoxB9jnokZl-xhsstlmaONFT--tfrwHDv-n-vn4mfSfRRvioJp2vEWFxT5aGoHH8xVhwANwFEjkPqGSk93-creYzZ-VEhRmv8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0e] via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<span class="bg-secondary/20 text-secondary text-[10px] font-bold px-2 py-1 rounded-sm border border-secondary/30 uppercase tracking-widest mb-4 inline-block">Strategy</span>
+<h3 class="text-3xl font-black font-headline text-white mb-2">TACTICAL ZERO</h3>
+<p class="text-sm text-on-surface-variant line-clamp-2 mb-6">Synchronized unit management in absolute vacuum conditions. No room for error.</p>
+<button class="w-full py-4 bg-primary text-on-primary font-bold rounded-xl flex items-center justify-center gap-2 hover:brightness-110 transition-all">
+<span class="material-symbols-outlined">bolt</span>
+                                QUICK MATCH
+                            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Game Card 3 -->
+<div class="flex-shrink-0 w-[420px] snap-start">
+<div class="tonal-card rounded-xl overflow-hidden group border border-white/5">
+<div class="relative h-[580px]">
+<img alt="Void Runner Game Art" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="vast abstract cosmic void with floating crystalline structures and fractal energy patterns, purple and cyan color scheme" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnjQK4j5RzUQdtT2tG0BdzRLM-nvhAeICWSyhPL1ZdQRkRL9dGrMGxFMKWgM87mHgQA8phNO2CFA-X-d_nubT3MesCDeqx7VxWmxoQjDrVqK88phaiqtfCUBms4ndqmpRKzNotAW5pHI5Au8-QaH0DnTpNSODDZJbx0m5O0gsgVlY8gm3cX1rC1XHPbnjIn7QQM3e7M13JOF8AePczVl2PdTWcOMLPlX7gCVAoK20_AMt-rWX3e4dbOXNz2baDvmN9wEMgJiq-5oo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0e] via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<span class="bg-tertiary/20 text-tertiary text-[10px] font-bold px-2 py-1 rounded-sm border border-tertiary/30 uppercase tracking-widest mb-4 inline-block">Exploration</span>
+<h3 class="text-3xl font-black font-headline text-white mb-2">VOID RUNNER</h3>
+<p class="text-sm text-on-surface-variant line-clamp-2 mb-6">Traverse the edges of the simulation where physics breaks down and data flows raw.</p>
+<button class="w-full py-4 bg-primary text-on-primary font-bold rounded-xl flex items-center justify-center gap-2 hover:brightness-110 transition-all">
+<span class="material-symbols-outlined">bolt</span>
+                                QUICK MATCH
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Fixed Model Selection Bar at the bottom -->
+<footer class="fixed bottom-0 left-[240px] right-0 bg-[#0e0e13]/95 backdrop-blur-xl border-t border-white/[0.05] p-6 z-40">
+<div class="max-w-7xl mx-auto flex items-center justify-center gap-12">
+<div class="flex items-center gap-3 shrink-0">
+<span class="material-symbols-outlined text-primary text-xl">settings_input_component</span>
+<h3 class="text-sm font-bold font-headline tracking-widest uppercase">Match Setup</h3>
+</div>
+<div class="h-8 w-px bg-white/10 hidden md:block"></div>
+<div class="flex gap-4 items-center">
+<!-- Supreme King Option -->
+<label class="w-[220px] relative block cursor-pointer group">
+<input checked="" class="peer sr-only" name="king-model" type="radio"/>
+<div class="p-3 px-5 rounded-xl bg-surface-container-highest border-2 border-transparent peer-checked:border-tertiary transition-all hover:bg-surface-bright flex items-center gap-4">
+<span class="material-symbols-outlined text-tertiary shrink-0" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+<div class="flex flex-col overflow-hidden">
+<span class="text-tertiary font-headline font-bold text-sm tracking-tight whitespace-nowrap">Supreme King</span>
+<p class="text-[10px] text-on-surface-variant leading-none mt-1 whitespace-nowrap">Max reward / +15% Diff</p>
+</div>
+</div>
+</label>
+<!-- Glorious King Option -->
+<label class="w-[220px] relative block cursor-pointer group">
+<input class="peer sr-only" name="king-model" type="radio"/>
+<div class="p-3 px-5 rounded-xl bg-surface-container-highest border-2 border-transparent peer-checked:border-secondary transition-all hover:bg-surface-bright flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary shrink-0" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+<div class="flex flex-col overflow-hidden">
+<span class="text-on-surface font-headline font-bold text-sm tracking-tight whitespace-nowrap">Glorious King</span>
+<p class="text-[10px] text-on-surface-variant leading-none mt-1 whitespace-nowrap">Balanced Efficiency</p>
+</div>
+</div>
+</label>
+<!-- Zenith King Option -->
+<label class="w-[220px] relative block cursor-pointer group">
+<input class="peer sr-only" name="king-model" type="radio"/>
+<div class="p-3 px-5 rounded-xl bg-surface-container-highest border-2 border-transparent peer-checked:border-primary transition-all hover:bg-surface-bright flex items-center gap-4">
+<span class="material-symbols-outlined text-primary shrink-0" style="font-variation-settings: 'FILL' 1;">diamond</span>
+<div class="flex flex-col overflow-hidden">
+<span class="text-on-surface font-headline font-bold text-sm tracking-tight whitespace-nowrap">Zenith King</span>
+<p class="text-[10px] text-on-surface-variant leading-none mt-1 whitespace-nowrap">Ultra-stability / -10%</p>
+</div>
+</div>
+</label>
+</div>
+</div>
+</footer>
+</main>
+</body></html>

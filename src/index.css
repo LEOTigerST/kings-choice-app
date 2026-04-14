@@ -1,0 +1,29 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  body {
+    @apply bg-background text-on-surface font-body;
+    /* Optional: custom selection colors from the body class in HTML */
+    ::selection {
+      background-color: #8ff5ff; /* primary */
+      color: #005d63; /* on-primary */
+    }
+  }
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.king-glow-gold { box-shadow: 0 0 20px rgba(255, 231, 146, 0.15); }
+.king-glow-silver { box-shadow: 0 0 20px rgba(172, 170, 177, 0.15); }
+.king-glow-bronze { box-shadow: 0 0 20px rgba(239, 201, 0, 0.1); }
+.glass-panel { backdrop-filter: blur(12px); }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0e0e13; }
+::-webkit-scrollbar-thumb { background: #48474d; border-radius: 10px; }
