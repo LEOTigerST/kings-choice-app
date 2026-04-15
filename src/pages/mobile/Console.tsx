@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { CreateGameModal } from '../../components/modals/CreateGameModal';
+import { JoinGameModal } from '../../components/modals/JoinGameModal';
 
 export const MobileConsole: React.FC = () => {
   const { t } = useTranslation();
+  const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
+  const [isJoinModalOpen, setIsJoinModalOpen] = useState(false);
+
   return (
     <>
 
@@ -12,7 +17,7 @@ export const MobileConsole: React.FC = () => {
 <h2 className="font-headline text-3xl font-bold uppercase tracking-tight">{t('console.games.title')}</h2>
 </div>
 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-<button className="group relative overflow-hidden bg-surface-container-high rounded-xl p-8 h-44 flex flex-col justify-end transition-all active:scale-95 border border-white/5 hover:border-secondary/30">
+<button onClick={() => setIsJoinModalOpen(true)} className="group relative overflow-hidden bg-surface-container-high rounded-xl p-8 h-44 flex flex-col justify-end transition-all active:scale-95 border border-white/5 hover:border-secondary/30">
 <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
 <span className="material-symbols-outlined text-8xl">login</span>
 </div>
@@ -21,7 +26,7 @@ export const MobileConsole: React.FC = () => {
 </div>
 <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
 </button>
-<button className="group relative overflow-hidden bg-surface-container-high rounded-xl p-8 h-44 flex flex-col justify-end transition-all active:scale-95 border border-white/5 hover:border-primary/30">
+<button onClick={() => setIsCreateModalOpen(true)} className="group relative overflow-hidden bg-surface-container-high rounded-xl p-8 h-44 flex flex-col justify-end transition-all active:scale-95 border border-white/5 hover:border-primary/30">
 <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
 <span className="material-symbols-outlined text-8xl">add_circle</span>
 </div>
@@ -244,7 +249,8 @@ export const MobileConsole: React.FC = () => {
 </div>
 </div>
 </section>
-
+      <CreateGameModal isOpen={isCreateModalOpen} onClose={() => setIsCreateModalOpen(false)} />
+      <JoinGameModal isOpen={isJoinModalOpen} onClose={() => setIsJoinModalOpen(false)} />
     </>
   );
 };

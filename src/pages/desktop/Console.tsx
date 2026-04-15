@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { CreateGameModal } from '../../components/modals/CreateGameModal';
+import { JoinGameModal } from '../../components/modals/JoinGameModal';
 
 export const DesktopConsole: React.FC = () => {
   const { t } = useTranslation();
+  const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
+  const [isJoinModalOpen, setIsJoinModalOpen] = useState(false);
+
   return (
     <>
 
@@ -15,7 +20,7 @@ export const DesktopConsole: React.FC = () => {
 <div className="relative h-full p-8 flex flex-col justify-end">
 <h3 className="font-headline text-3xl font-bold text-white mb-2">{t('console.games.join')}</h3>
 <p className="text-on-surface-variant text-sm mb-6 max-w-xs">{t('console.enter_active')}</p>
-<button className="w-fit px-8 py-3 bg-primary text-on-primary font-bold rounded-md hover:shadow-[0_0_25px_rgba(143,245,255,0.4)] transition-all flex items-center gap-2">
+<button onClick={() => setIsJoinModalOpen(true)} className="w-fit px-8 py-3 bg-primary text-on-primary font-bold rounded-md hover:shadow-[0_0_25px_rgba(143,245,255,0.4)] transition-all flex items-center gap-2">
                             {t('console.enter_lobby')} <span className="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
 </button>
 </div>
@@ -26,7 +31,7 @@ export const DesktopConsole: React.FC = () => {
 <div className="relative h-full p-8 flex flex-col justify-end">
 <h3 className="font-headline text-3xl font-bold text-white mb-2">{t('console.games.create')}</h3>
 <p className="text-on-surface-variant text-sm mb-6 max-w-xs">{t('console.host_desc')}</p>
-<button className="w-fit px-8 py-3 bg-transparent border border-primary text-primary font-bold rounded-md hover:bg-primary/10 transition-all flex items-center gap-2">
+<button onClick={() => setIsCreateModalOpen(true)} className="w-fit px-8 py-3 bg-transparent border border-primary text-primary font-bold rounded-md hover:bg-primary/10 transition-all flex items-center gap-2">
                             {t('console.host_arena')} <span className="material-symbols-outlined text-sm" data-icon="add">add</span>
 </button>
 </div>
@@ -237,7 +242,8 @@ export const DesktopConsole: React.FC = () => {
 </div>
 </section>
 </div>
-
+      <CreateGameModal isOpen={isCreateModalOpen} onClose={() => setIsCreateModalOpen(false)} />
+      <JoinGameModal isOpen={isJoinModalOpen} onClose={() => setIsJoinModalOpen(false)} />
     </>
   );
 };
