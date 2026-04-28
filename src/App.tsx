@@ -33,7 +33,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={isDesktop ? <DesktopLayout /> : <MobileLayout />}>
-        <Route index element={<Navigate to="/console" replace />} />
+        <Route index element={<Navigate to={`/console${location.search}`} replace />} />
         <Route path="console" element={isDesktop ? <DesktopConsole /> : <MobileConsole />} />
         <Route path="store" element={isDesktop ? <DesktopStore /> : <MobileStore />} />
         <Route path="games" element={isDesktop ? <DesktopPlay /> : <MobilePlay />} />

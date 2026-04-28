@@ -27,7 +27,7 @@ export const MobileSettings: React.FC = () => {
 <div className="w-full space-y-2">
 <label className="block font-label text-[10px] uppercase tracking-widest text-on-surface-variant font-semibold">{t('settings.nickname')}</label>
 <div className="relative">
-<input className="w-full bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all font-headline text-primary" type="text" value="Pilot_01"/>
+<input className="w-full bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-4 py-3 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all font-headline text-primary" type="text" defaultValue="Pilot_01"/>
 <span className="absolute right-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline-variant text-lg">fingerprint</span>
 </div>
 </div>

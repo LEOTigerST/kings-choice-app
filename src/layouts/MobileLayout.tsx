@@ -1,10 +1,12 @@
 import React from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { useDestructionPool } from '../hooks/useDestructionPool';
 
 export const MobileLayout: React.FC = () => {
   const { t } = useTranslation();
   const location = useLocation();
+  const destroyCount = useDestructionPool();
 
   const getNavClass = (path: string) => {
     return location.pathname === path 
@@ -22,7 +24,7 @@ export const MobileLayout: React.FC = () => {
           <span className="font-headline tracking-tight uppercase text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-[#8ff5ff] to-[#00eefc]">{t('header.kinetic')}</span>
         </div>
         <div className="text-[#8ff5ff] font-headline tracking-tight uppercase text-sm font-medium bg-surface-container-high px-3 py-1.5 rounded-full shadow-[0_0_40px_rgba(143,245,255,0.08)]">
-            {t('header.fate_label')}: 1,200 | {t('header.lang_code')}
+            {t('common.destruction_pool')}: {destroyCount.toLocaleString()} | {t('header.lang_code')}
         </div>
       </header>
 

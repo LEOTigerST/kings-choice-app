@@ -12,6 +12,7 @@
   },
   "common": {
     "fate_points": "天命积分",
+    "destruction_pool": "销毁池",
     "vip_level": "VIP 等级",
     "version": "版本",
     "active": "活跃",

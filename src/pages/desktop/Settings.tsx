@@ -37,7 +37,7 @@ export const DesktopSettings: React.FC = () => {
                     <div className="space-y-2">
                       <label className="text-xs font-label uppercase tracking-widest text-on-surface-variant">{t('settings.operative_nickname')}</label>
                       <div className="relative">
-                        <input className="w-full bg-surface-container-lowest border-none rounded-md px-4 py-3 text-on-background focus:ring-1 focus:ring-primary font-headline tracking-wide" type="text" value="Xenon_Rider" />
+                        <input className="w-full bg-surface-container-lowest border-none rounded-md px-4 py-3 text-on-background focus:ring-1 focus:ring-primary font-headline tracking-wide" type="text" defaultValue="Xenon_Rider" />
                         <span className="absolute right-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline text-sm" data-icon="edit">edit</span>
                       </div>
                     </div>

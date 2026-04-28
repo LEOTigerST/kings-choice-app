@@ -1,10 +1,12 @@
 import React from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { useDestructionPool } from '../hooks/useDestructionPool';
 
 export const DesktopLayout: React.FC = () => {
     const { t } = useTranslation();
     const location = useLocation();
+    const destroyCount = useDestructionPool();
 
     const getNavClass = (path: string) => {
         return location.pathname === path
@@ -19,7 +21,7 @@ export const DesktopLayout: React.FC = () => {
                 <div className="flex items-center gap-8">
                     <span className="text-2xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-[#8ff5ff] to-[#00eefc] font-headline">{t('header.kinetic')}</span>
                     <nav className="hidden md:flex gap-6 font-headline tracking-tight text-sm uppercase">
-                        <span className="text-[#8ff5ff] font-bold border-b-2 border-[#8ff5ff] pb-1">{t('common.fate_points')}: 2,500</span>
+                        <span className="text-[#8ff5ff] font-bold border-b-2 border-[#8ff5ff] pb-1">{t('common.destruction_pool')}: {destroyCount.toLocaleString()}</span>
                         <span className="text-[#acaab1] hover:text-[#8ff5ff] transition-colors">{t('common.vip_level')}: 4</span>
                     </nav>
                 </div>

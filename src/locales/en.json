@@ -12,6 +12,7 @@
   },
   "common": {
     "fate_points": "Fate Points",
+    "destruction_pool": "Destruction Pool",
     "vip_level": "VIP Level",
     "version": "Version",
     "active": "Active",
