@@ -65,7 +65,7 @@ export const MobileConsole: React.FC = () => {
 <span className="text-on-surface font-bold">12</span>
 </div>
 <div className="flex gap-2">
-<input className="flex-1 bg-surface-container-lowest border-none rounded-md px-3 py-2 text-xs font-headline text-on-surface focus:ring-1 focus:ring-tertiary/40 placeholder:text-outline-variant" placeholder={t('console.swap_amt')} type="number"/>
+<input className="flex-1 bg-surface-container-lowest border-none rounded-md px-3 py-2 text-xs font-headline text-on-surface focus:ring-1 focus:ring-tertiary/40 placeholder:text-outline-variant" placeholder={t('console.swap_amt_supreme')} type="number"/>
 <button className="px-4 py-2 bg-tertiary text-on-tertiary font-bold text-[10px] uppercase tracking-widest rounded-md hover:opacity-90 active:scale-95 transition-all">{t('console.swap_btn')}</button>
 </div>
 </div>
@@ -82,7 +82,7 @@ export const MobileConsole: React.FC = () => {
 <span className="text-on-surface font-bold">0</span>
 </div>
 <div className="flex gap-2">
-<input className="flex-1 bg-surface-container-lowest border-none rounded-md px-3 py-2 text-xs font-headline text-on-surface focus:ring-1 focus:ring-outline/40 placeholder:text-outline-variant" placeholder={t('console.swap_amt')} type="number"/>
+<input className="flex-1 bg-surface-container-lowest border-none rounded-md px-3 py-2 text-xs font-headline text-on-surface focus:ring-1 focus:ring-outline/40 placeholder:text-outline-variant" placeholder={t('console.swap_amt_glorious')} type="number"/>
 <button className="px-4 py-2 bg-on-surface-variant text-surface text-[10px] font-bold uppercase tracking-widest rounded-md hover:opacity-90 active:scale-95 transition-all">{t('console.swap_btn')}</button>
 </div>
 </div>
@@ -99,7 +99,7 @@ export const MobileConsole: React.FC = () => {
 <span className="text-on-surface font-bold">5</span>
 </div>
 <div className="flex gap-2">
-<input className="flex-1 bg-surface-container-lowest border-none rounded-md px-3 py-2 text-xs font-headline text-on-surface focus:ring-1 focus:ring-error/40 placeholder:text-outline-variant" placeholder={t('console.swap_amt')} type="number"/>
+<input className="flex-1 bg-surface-container-lowest border-none rounded-md px-3 py-2 text-xs font-headline text-on-surface focus:ring-1 focus:ring-error/40 placeholder:text-outline-variant" placeholder={t('console.swap_amt_zenith')} type="number"/>
 <button className="px-4 py-2 bg-error text-on-error font-bold text-[10px] uppercase tracking-widest rounded-md hover:opacity-90 active:scale-95 transition-all">{t('console.swap_btn')}</button>
 </div>
 </div>

@@ -64,7 +64,7 @@ export const MobileSettings: React.FC = () => {
 <span className="material-symbols-outlined">language</span>
 </div>
 <div className="text-left">
-<p className="font-body font-bold text-on-surface">Language / 语言</p>
+<p className="font-body font-bold text-on-surface">{t('settings.interface_lang')}</p>
 <p className="font-label text-xs text-on-surface-variant">{i18n.language.startsWith('en') ? 'English (US)' : '简体中文'}</p>
 </div>
 </div>

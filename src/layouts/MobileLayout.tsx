@@ -19,7 +19,7 @@ export const MobileLayout: React.FC = () => {
           <div className="w-10 h-10 rounded-full overflow-hidden border border-primary/20">
             <img alt="Avatar" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXTL9xc3PHKEYgXZZWSVGAVT01m8DRFSM2zYYmcVZSnGCElbgkKttxgm9vELUFrNulNJhPlDn5zC1YKMBbwdfhTTBkCV1q4_Y3-7jOoCIivXqBQYGBMMrZpNER82IonWv6yfscjGQtY3Hk-aTIWXUjWWB2Dm4dWfSST2PKk_-U_3JMReU04dGlrROd5SOq220Y0kaEA1CXHRdDF_oEkU9UNm7IHG3aZA4KmA7fv8hj7fGsPBKCNEvUBjfEDGUZmJzXUVpfIojaAbA"/>
           </div>
-          <span className="font-headline tracking-tight uppercase text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-[#8ff5ff] to-[#00eefc]">KINETIC</span>
+          <span className="font-headline tracking-tight uppercase text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-[#8ff5ff] to-[#00eefc]">{t('header.kinetic')}</span>
         </div>
         <div className="text-[#8ff5ff] font-headline tracking-tight uppercase text-sm font-medium bg-surface-container-high px-3 py-1.5 rounded-full shadow-[0_0_40px_rgba(143,245,255,0.08)]">
             {t('header.fate_label')}: 1,200 | {t('header.lang_code')}

@@ -11,7 +11,7 @@
     "launch_game": "LAUNCH GAME"
   },
   "common": {
-    "fate_points": "Destruction Pool",
+    "fate_points": "Fate Points",
     "vip_level": "VIP Level",
     "version": "Version",
     "active": "Active",
@@ -89,7 +89,9 @@
     "reward_eq": "Redeem Points for Lucky Draws",
     "swap": "Convert",
     "swap_btn": "Convert",
-    "swap_amt": "Convert Amount",
+    "swap_amt_supreme": "20 points per ticket",
+    "swap_amt_glorious": "200 points per ticket",
+    "swap_amt_zenith": "2000 points per ticket",
     "tier_multi": "Chosen Points are automatically exchanged for luck draw tickets at a 1:1 matching ratio with Fate Points.",
     "chosen_label": "Chosen",
     "apply_pr_boost": "APPLY FOR PR BOOST",
@@ -135,8 +137,8 @@
     "starter_core_desc": "Get 10 USD worth of King Runestones.",
     "zenith_plate_desc": "Get 100 USD worth of King Runestones.",
     "deposit_address_label": "LUCA Receiving Address",
-    "eth_rate": "USDT Rate",
-    "btc_rate": "WBNB Rate"
+    "usdt_rate": "USDT Rate",
+    "wbnb_rate": "WBNB Rate"
   },
   "settings": {
     "avatar_gallery": "Avatar Gallery",

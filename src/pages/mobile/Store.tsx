@@ -30,11 +30,11 @@ export const MobileStore: React.FC = () => {
 </div>
 <div className="p-6">
 <div className="flex flex-col mb-6">
-<h3 className="font-headline text-xl font-bold leading-tight mb-1">{t('store.starter_pack')}</h3>
-<p className="text-on-surface-variant text-xs">Includes 1,000 Fate + Seasonal Skin</p>
+<h3 className="font-headline text-xl font-bold leading-tight mb-1">{t('store.starter_core_pack')}</h3>
+<p className="text-on-surface-variant text-xs">{t('store.starter_core_desc')}</p>
 </div>
 <div className="flex items-center justify-between">
-<span className="font-headline text-2xl font-black text-primary">$9.99</span>
+<span className="font-headline text-2xl font-black text-primary">$19.99</span>
 <button className="bg-primary text-on-primary px-6 py-2.5 rounded-md font-bold text-sm active:scale-95 transition-transform hover:brightness-110">{t('store.purchase')}</button>
 </div>
 </div>
@@ -46,11 +46,11 @@ export const MobileStore: React.FC = () => {
 </div>
 <div className="p-6">
 <div className="flex flex-col mb-6">
-<h3 className="font-headline text-xl font-bold leading-tight mb-1">{t('store.booster_bundle')}</h3>
-<p className="text-on-surface-variant text-xs">5,000 Fate Credits for accelerated growth</p>
+<h3 className="font-headline text-xl font-bold leading-tight mb-1">{t('status.zenith_plate')}</h3>
+<p className="text-on-surface-variant text-xs">{t('store.zenith_plate_desc')}</p>
 </div>
 <div className="flex items-center justify-between">
-<span className="font-headline text-2xl font-black text-primary">$49.99</span>
+<span className="font-headline text-2xl font-black text-primary">$45.00</span>
 <button className="bg-primary text-on-primary px-6 py-2.5 rounded-md font-bold text-sm active:scale-95 transition-transform hover:brightness-110">{t('store.purchase')}</button>
 </div>
 </div>
@@ -63,11 +63,11 @@ export const MobileStore: React.FC = () => {
 </div>
 <div className="p-6">
 <div className="flex flex-col mb-6">
-<h3 className="font-headline text-xl font-bold leading-tight mb-1">{t('status.zenith_core')}</h3>
-<p className="text-on-surface-variant text-xs">{t('store.unlock_unlimited')}</p>
+<h3 className="font-headline text-xl font-bold leading-tight mb-1">{t('store.neural_boost_30d')}</h3>
+<p className="text-on-surface-variant text-xs">{t('store.neural_boost_desc')}</p>
 </div>
 <div className="flex items-center justify-between">
-<span className="font-headline text-2xl font-black text-tertiary">$99.99</span>
+<span className="font-headline text-2xl font-black text-tertiary">$12.50</span>
 <button className="bg-tertiary text-on-tertiary px-6 py-2.5 rounded-md font-bold text-sm active:scale-95 transition-transform shadow-[0_0_20px_rgba(255,231,146,0.3)] hover:brightness-110">{t('store.purchase')}</button>
 </div>
 </div>
@@ -96,10 +96,10 @@ export const MobileStore: React.FC = () => {
 </div>
 </div>
 <p className="text-on-surface-variant leading-relaxed text-sm mb-8">
-              Utilize decentralized assets for instant settlement and reduced overhead. We currently accept Bitcoin (BTC), Ethereum (ETH), and Tether (USDT).
-              <span className="block mt-4 p-4 rounded-lg bg-surface-container-highest/50 border border-primary/10 text-on-surface">
-<strong className="text-primary">+15% Bonus Credits</strong> {t('store.auto_applied')}
-              </span>
+  {t('store.load_wallet')} <span className="text-primary font-bold">{t('common.fate_points')}</span> {t('store.at_current')}
+  <span className="block mt-4 p-4 rounded-lg bg-surface-container-highest/50 border border-primary/10 text-on-surface">
+    <strong className="text-primary">{t('store.no_fees')}</strong> {t('store.auto_verification')}
+  </span>
 </p>
 <div className="space-y-4">
 <label className="font-label text-xs text-on-surface-variant uppercase tracking-widest block font-semibold">{t('store.destination_wallet')}</label>
@@ -113,7 +113,7 @@ export const MobileStore: React.FC = () => {
 </div>
 <div className="flex items-center gap-2 text-xs text-on-surface-variant/70">
 <span className="material-symbols-outlined text-sm">info</span>
-                Compatible with ERC-20 networks only.
+                {t('store.no_fees')}
               </div>
 </div>
 </div>
@@ -127,7 +127,7 @@ export const MobileStore: React.FC = () => {
 </div>
 <div className="mt-8 text-center">
 <span className="text-xs font-label uppercase tracking-[0.2em] text-on-surface-variant block mb-1">{t('store.scan_deposit')}</span>
-<p className="text-[10px] text-on-surface-variant/50 max-w-[160px]">Verification usually takes 3-5 network confirmations</p>
+<p className="text-[10px] text-on-surface-variant/50 max-w-[160px]">{t('store.secure_cold')}</p>
 </div>
 </div>
 </div>

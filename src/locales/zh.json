@@ -11,7 +11,7 @@
     "launch_game": "启动游戏"
   },
   "common": {
-    "fate_points": "销毁池",
+    "fate_points": "天命积分",
     "vip_level": "VIP 等级",
     "version": "版本",
     "active": "活跃",
@@ -89,7 +89,9 @@
     "reward_eq": "积分兑换抽奖",
     "swap": "兑换",
     "swap_btn": "兑换",
-    "swap_amt": "每20个积分兑换一张抽奖券",
+    "swap_amt_supreme": "20积分一张抽奖券",
+    "swap_amt_glorious": "200积分一张抽奖券",
+    "swap_amt_zenith": "2000积分一张抽奖券",
     "tier_multi": "天选积分按照天命积分 1:1 配比自动兑换抽奖券",
     "chosen_label": "天选",
     "apply_pr_boost": "申请PR加成",
@@ -135,8 +137,8 @@
     "starter_core_desc": "获得价值10美元的王者符石。",
     "zenith_plate_desc": "获得价值100美元的王者符石。",
     "deposit_address_label": "LUCA接收地址",
-    "eth_rate": "USDT 汇率",
-    "btc_rate": "WBNB 汇率"
+    "usdt_rate": "USDT 汇率",
+    "wbnb_rate": "WBNB 汇率"
   },
   "settings": {
     "avatar_gallery": "头像库",

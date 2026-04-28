@@ -63,7 +63,7 @@ export const DesktopConsole: React.FC = () => {
 <div className="mt-auto pt-4 border-t border-outline-variant/10">
 <p className="text-[10px] uppercase font-label tracking-widest text-on-surface-variant mb-2">{t('prize.ticket_swap')}</p>
 <div className="flex gap-2">
-<input className="w-full bg-surface-container-lowest border-0 rounded-md py-2 px-3 text-sm focus:ring-1 focus:ring-tertiary text-tertiary" placeholder="Qty" type="number"/>
+<input className="w-full bg-surface-container-lowest border-0 rounded-md py-2 px-3 text-sm focus:ring-1 focus:ring-tertiary text-tertiary" placeholder={t('console.swap_amt_supreme')} type="number"/>
 <button className="px-4 py-2 bg-tertiary text-on-tertiary-fixed font-bold text-xs rounded hover:brightness-110 transition-all">{t('console.swap')}</button>
 </div>
 </div>
@@ -87,7 +87,7 @@ export const DesktopConsole: React.FC = () => {
 <div className="mt-auto pt-4 border-t border-outline-variant/10">
 <p className="text-[10px] uppercase font-label tracking-widest text-on-surface-variant mb-2">{t('prize.ticket_swap')}</p>
 <div className="flex gap-2">
-<input className="w-full bg-surface-container-lowest border-0 rounded-md py-2 px-3 text-sm focus:ring-1 focus:ring-outline text-on-surface" placeholder="Qty" type="number"/>
+<input className="w-full bg-surface-container-lowest border-0 rounded-md py-2 px-3 text-sm focus:ring-1 focus:ring-outline text-on-surface" placeholder={t('console.swap_amt_glorious')} type="number"/>
 <button className="px-4 py-2 bg-on-surface-variant/20 text-on-surface font-bold text-xs rounded hover:bg-on-surface-variant/30 transition-all">{t('console.swap')}</button>
 </div>
 </div>
@@ -111,7 +111,7 @@ export const DesktopConsole: React.FC = () => {
 <div className="mt-auto pt-4 border-t border-outline-variant/10">
 <p className="text-[10px] uppercase font-label tracking-widest text-on-surface-variant mb-2">{t('prize.ticket_swap')}</p>
 <div className="flex gap-2">
-<input className="w-full bg-surface-container-lowest border-0 rounded-md py-2 px-3 text-sm focus:ring-1 focus:ring-tertiary-dim text-tertiary-dim" placeholder="Qty" type="number"/>
+<input className="w-full bg-surface-container-lowest border-0 rounded-md py-2 px-3 text-sm focus:ring-1 focus:ring-tertiary-dim text-tertiary-dim" placeholder={t('console.swap_amt_zenith')} type="number"/>
 <button className="px-4 py-2 bg-tertiary-dim text-on-tertiary-fixed-variant font-bold text-xs rounded hover:brightness-110 transition-all">{t('console.swap')}</button>
 </div>
 </div>

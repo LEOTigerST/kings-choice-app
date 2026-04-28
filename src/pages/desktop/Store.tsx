@@ -192,7 +192,7 @@ export const DesktopStore: React.FC = () => {
                           <span className="material-symbols-outlined text-[#627eea]">stat_0</span>
                         </div>
                         <div>
-                          <div className="text-[10px] text-on-surface-variant uppercase font-label">{t('store.eth_rate')}</div>
+                          <div className="text-[10px] text-on-surface-variant uppercase font-label">{t('store.usdt_rate')}</div>
                           <div className="text-sm font-headline font-bold">1 USDT = xxxx LUCA</div>
                         </div>
                       </div>
@@ -201,7 +201,7 @@ export const DesktopStore: React.FC = () => {
                           <span className="material-symbols-outlined text-[#f7931a]">currency_bitcoin</span>
                         </div>
                         <div>
-                          <div className="text-[10px] text-on-surface-variant uppercase font-label">{t('store.btc_rate')}</div>
+                          <div className="text-[10px] text-on-surface-variant uppercase font-label">{t('store.wbnb_rate')}</div>
                           <div className="text-sm font-headline font-bold">1 WBNB = xxxx LUCA</div>
                         </div>
                       </div>

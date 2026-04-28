@@ -17,7 +17,7 @@ export const DesktopLayout: React.FC = () => {
             {/* TopNavBar Shell */}
             <header className="fixed top-0 w-full z-50 bg-[#0e0e13]/70 backdrop-blur-xl shadow-[0_4px_30px_rgba(143,245,255,0.08)] flex justify-between items-center px-8 py-4">
                 <div className="flex items-center gap-8">
-                    <span className="text-2xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-[#8ff5ff] to-[#00eefc] font-headline">王者之选</span>
+                    <span className="text-2xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-[#8ff5ff] to-[#00eefc] font-headline">{t('header.kinetic')}</span>
                     <nav className="hidden md:flex gap-6 font-headline tracking-tight text-sm uppercase">
                         <span className="text-[#8ff5ff] font-bold border-b-2 border-[#8ff5ff] pb-1">{t('common.fate_points')}: 2,500</span>
                         <span className="text-[#acaab1] hover:text-[#8ff5ff] transition-colors">{t('common.vip_level')}: 4</span>
@@ -44,7 +44,7 @@ export const DesktopLayout: React.FC = () => {
                             <span className="material-symbols-outlined text-primary">bolt</span>
                         </div>
                         <div>
-                            <h2 className="text-xl font-black text-[#8ff5ff] italic font-headline leading-none">王者之选</h2>
+                            <h2 className="text-xl font-black text-[#8ff5ff] italic font-headline leading-none">{t('header.kinetic')}</h2>
                             <p className="text-[10px] text-on-surface-variant tracking-[0.2em] font-label">AETHERIS PRIME</p>
                         </div>
                     </div>
